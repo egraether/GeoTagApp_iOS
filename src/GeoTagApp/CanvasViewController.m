@@ -24,10 +24,16 @@
     if (canvasViewController.geoTagDirections != nil) {
         
         for (int i = 0; i < [canvasViewController.geoTagDirections count]; i++) {
+            
+            Vector* tag = [canvasViewController.geoTagDirections objectAtIndex:i];
 
-            float angle = [[canvasViewController.geoTagDirections objectAtIndex:i] angle: v];
+            float angle = [tag angle: v];
             
             if (abs(angle) <= screenAngle) {
+                
+                if (tag.x < 0 && angle > 0) {
+                    angle *= -1;
+                }
             
                 CGContextSaveGState(context);
                 
@@ -92,7 +98,7 @@
 
 - (void)changeBackground {
 
-    canvasView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+    canvasView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
     
 }
 

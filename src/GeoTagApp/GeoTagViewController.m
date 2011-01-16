@@ -40,9 +40,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    canvasViewController = [[CanvasViewController alloc] init];
-    [self.view insertSubview:canvasViewController.view atIndex:0];
-    
     geoLocationDelegate = [[GeoLocationDelegate alloc] init];
     [geoLocationDelegate startStandardUpdates];
     
@@ -50,25 +47,25 @@
 }
 
 - (void)press {
-//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-//    
-//	imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
-//	//imagePicker.delegate = self;
-//    
-//	imagePicker.allowsEditing = NO;
-//    
-//    imagePicker.showsCameraControls = NO;
-//    imagePicker.navigationBarHidden = YES;
-//    
-//    imagePicker.toolbarHidden = YES;
-//    imagePicker.wantsFullScreenLayout = YES;
-//    
-////    CGFloat cameraTransformX = 1.0;
-////    CGFloat cameraTransformY = 1.12412;
-////    
-////    imagePicker.cameraViewTransform = CGAffineTransformScale(imagePicker.cameraViewTransform, cameraTransformX, cameraTransformY);
-//    
-//	[self presentModalViewController:imagePicker animated:YES];
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+	imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
+	//imagePicker.delegate = self;
+    
+	imagePicker.allowsEditing = NO;
+    
+    imagePicker.showsCameraControls = NO;
+    imagePicker.navigationBarHidden = YES;
+    
+    imagePicker.toolbarHidden = YES;
+    imagePicker.wantsFullScreenLayout = YES;
+    
+    imagePicker.cameraViewTransform = CGAffineTransformScale(imagePicker.cameraViewTransform, 1.0, 1.12412);
+    
+    canvasViewController = [[CanvasViewController alloc] init];
+    [imagePicker.view addSubview:canvasViewController.view];
+    
+	[self presentModalViewController:imagePicker animated:YES];
     
     [self loadGeoTagsByLocation:geoLocationDelegate.location];
     
@@ -134,10 +131,10 @@
 
     NSError* error = NULL;
     
-    //SimpleKML *kml = [SimpleKML KMLWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"list" ofType:@"kml"] error:&error];
+    SimpleKML *kml = [SimpleKML KMLWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"list" ofType:@"kml"] error:&error];
     //SimpleKML *myKML = [SimpleKML KMLWithContentsOfURL:[NSURL URLWithString:@"http://sbickt.heroku.com/geotags/list.kml?coordinates[x]=47.79&coordinates[y]=13.08"] error:&error];
     
-    SimpleKML *kml = [SimpleKML KMLWithContentsOfURL:[NSURL URLWithString:@"http://egraether.multimediatechnology.at/list.kml"] error:&error];    
+    //SimpleKML *kml = [SimpleKML KMLWithContentsOfURL:[NSURL URLWithString:@"http://egraether.multimediatechnology.at/list.kml"] error:&error];    
     
     if (error) {
         NSLog(@"%@", error);

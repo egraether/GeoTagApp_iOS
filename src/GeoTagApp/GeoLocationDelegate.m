@@ -25,7 +25,7 @@
     [locationManager startUpdatingLocation];
 
     if ([CLLocationManager headingAvailable]) {
-        locationManager.headingFilter = 5;
+        locationManager.headingFilter = 1;
         [locationManager startUpdatingHeading];
     }
     
@@ -62,7 +62,6 @@
       
     self.heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading);
     
-    NSLog(@"heading %+.6f", self.heading);
 }
 
 - (void)dealloc {

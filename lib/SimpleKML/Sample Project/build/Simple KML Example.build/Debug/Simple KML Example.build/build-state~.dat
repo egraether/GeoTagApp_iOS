@@ -1,0 +1,68 @@
+TSimple KML Example
+v7
+r1
+cCheck dependencies
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/MainWindow.xib
+c000000004CB02ABA0000000000004EAD
+t1286613690
+s20141
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/Simple_KML_ExampleViewController.xib
+c000000004CB02ABA000000000000401A
+t1286613690
+s16410
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app
+t2
+s0
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app/Contents/Info.plist
+t2
+s0
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app/Contents/Resources/MainWindow.nib
+t2
+s0
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app/Contents/Resources/Simple_KML_ExampleViewController.nib
+t2
+s0
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app/Contents/Resources/example.kml
+t2
+s0
+
+N/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/example.kml
+c000000004CB02ABA0000000000000454
+t1286613690
+s1108
+
+NSimple_KML_Example-Info.plist
+c000000004CB02ABA000000000000038D
+t1286613690
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies316694707#316694707#0(66"[BEROR]error: There is no SDK with the name or path 'iphoneos4.0'1(4@58"error: There is no SDK with the name or path 'iphoneos4.0'316694707#18446744073709551615#0#0(1@0"0(0#1#0"8618588256#0"0#
+
+CCompileXIB "/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/MainWindow.xib"
+r0
+
+CCompileXIB "/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/Simple_KML_ExampleViewController.xib"
+r0
+
+CCpResource "build/Debug/Simple KML Example.app/Contents/Resources/example.kml" example.kml
+r0
+
+CProcessInfoPlistFile "/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app/Contents/Info.plist" Simple_KML_Example-Info.plist
+r0
+
+CTouch "/Users/ebsi/Documents/GeoTag/GeoTagApp_iOS/lib/SimpleKML/Sample Project/build/Debug/Simple KML Example.app"
+r0
+

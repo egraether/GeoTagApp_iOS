@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6867B4DB133E2A3B000EA2C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DA133E2A3B000EA2C8 /* UIKit.framework */; };
+		6867B4DD133E2A3B000EA2C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DC133E2A3B000EA2C8 /* Foundation.framework */; };
+		6867B4DF133E2A3B000EA2C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DE133E2A3B000EA2C8 /* CoreGraphics.framework */; };
+		6867B4E5133E2A3B000EA2C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6867B4E3133E2A3B000EA2C8 /* InfoPlist.strings */; };
+		6867B4E8133E2A3B000EA2C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B4E7133E2A3B000EA2C8 /* main.m */; };
+		6867B4EB133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */; };
+		6867B4EE133E2A3B000EA2C8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6867B4EC133E2A3B000EA2C8 /* MainWindow.xib */; };
+		6867B4FB133E2A3B000EA2C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DA133E2A3B000EA2C8 /* UIKit.framework */; };
+		6867B4FC133E2A3B000EA2C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DC133E2A3B000EA2C8 /* Foundation.framework */; };
+		6867B4FD133E2A3B000EA2C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DE133E2A3B000EA2C8 /* CoreGraphics.framework */; };
+		6867B505133E2A3B000EA2C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6867B503133E2A3B000EA2C8 /* InfoPlist.strings */; };
+		6867B508133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6867B507133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h */; };
+		6867B50A133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B509133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m */; };
+		6867B516133E2DDB000EA2C8 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B514133E2DDB000EA2C8 /* CameraViewController.m */; };
+		6867B517133E2DDB000EA2C8 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6867B515133E2DDB000EA2C8 /* CameraViewController.xib */; };
+		6867B51B133E2E3C000EA2C8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B519133E2E3A000EA2C8 /* MapViewController.m */; };
+		6867B51C133E2E3C000EA2C8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6867B51A133E2E3B000EA2C8 /* MapViewController.xib */; };
+		6867B51E133E37F8000EA2C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B51D133E37F8000EA2C8 /* MapKit.framework */; };
+		6867B5C2133E4799000EA2C8 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 6867B524133E4798000EA2C8 /* LICENSE.md */; };
+		6867B5C3133E4799000EA2C8 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6867B526133E4798000EA2C8 /* LICENSE.txt */; };
+		6867B5C4133E4799000EA2C8 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B529133E4798000EA2C8 /* ioapi.c */; };
+		6867B5C5133E4799000EA2C8 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B52B133E4798000EA2C8 /* mztools.c */; };
+		6867B5C6133E4799000EA2C8 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B52D133E4798000EA2C8 /* unzip.c */; };
+		6867B5C7133E4799000EA2C8 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B52F133E4798000EA2C8 /* zip.c */; };
+		6867B5C8133E4799000EA2C8 /* FileInZipInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B533133E4798000EA2C8 /* FileInZipInfo.m */; };
+		6867B5C9133E4799000EA2C8 /* ZipException.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B535133E4798000EA2C8 /* ZipException.m */; };
+		6867B5CA133E4799000EA2C8 /* ZipFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B537133E4798000EA2C8 /* ZipFile.m */; };
+		6867B5CB133E4799000EA2C8 /* ZipReadStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B539133E4798000EA2C8 /* ZipReadStream.m */; };
+		6867B5CC133E4799000EA2C8 /* ZipWriteStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B53B133E4798000EA2C8 /* ZipWriteStream.m */; };
+		6867B5CD133E4799000EA2C8 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B53D133E4798000EA2C8 /* adler32.c */; };
+		6867B5CE133E4799000EA2C8 /* compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B53E133E4798000EA2C8 /* compress.c */; };
+		6867B5CF133E4799000EA2C8 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B53F133E4798000EA2C8 /* crc32.c */; };
+		6867B5D0133E4799000EA2C8 /* deflate.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B541133E4798000EA2C8 /* deflate.c */; };
+		6867B5D1133E4799000EA2C8 /* gzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B543133E4798000EA2C8 /* gzio.c */; };
+		6867B5D2133E4799000EA2C8 /* infback.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B544133E4798000EA2C8 /* infback.c */; };
+		6867B5D3133E4799000EA2C8 /* inffast.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B545133E4798000EA2C8 /* inffast.c */; };
+		6867B5D4133E4799000EA2C8 /* inflate.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B548133E4798000EA2C8 /* inflate.c */; };
+		6867B5D5133E4799000EA2C8 /* inftrees.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B54A133E4798000EA2C8 /* inftrees.c */; };
+		6867B5D6133E4799000EA2C8 /* trees.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B54C133E4798000EA2C8 /* trees.c */; };
+		6867B5D7133E4799000EA2C8 /* uncompr.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B54E133E4798000EA2C8 /* uncompr.c */; };
+		6867B5D8133E4799000EA2C8 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 6867B551133E4798000EA2C8 /* zutil.c */; };
+		6867B5D9133E4799000EA2C8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6867B553133E4798000EA2C8 /* README.md */; };
+		6867B5F2133E4799000EA2C8 /* SimpleKML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B57B133E4798000EA2C8 /* SimpleKML.m */; };
+		6867B5F3133E4799000EA2C8 /* SimpleKML_UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B57D133E4798000EA2C8 /* SimpleKML_UIImage.m */; };
+		6867B5F4133E4799000EA2C8 /* SimpleKMLBalloonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B57F133E4798000EA2C8 /* SimpleKMLBalloonStyle.m */; };
+		6867B5F5133E4799000EA2C8 /* SimpleKMLColorStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B581133E4798000EA2C8 /* SimpleKMLColorStyle.m */; };
+		6867B5F6133E4799000EA2C8 /* SimpleKMLContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B583133E4798000EA2C8 /* SimpleKMLContainer.m */; };
+		6867B5F7133E4799000EA2C8 /* SimpleKMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B585133E4798000EA2C8 /* SimpleKMLDocument.m */; };
+		6867B5F8133E4799000EA2C8 /* SimpleKMLFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B587133E4798000EA2C8 /* SimpleKMLFeature.m */; };
+		6867B5F9133E4799000EA2C8 /* SimpleKMLFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B589133E4798000EA2C8 /* SimpleKMLFolder.m */; };
+		6867B5FA133E4799000EA2C8 /* SimpleKMLGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B58B133E4798000EA2C8 /* SimpleKMLGeometry.m */; };
+		6867B5FB133E4799000EA2C8 /* SimpleKMLIconStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B58D133E4798000EA2C8 /* SimpleKMLIconStyle.m */; };
+		6867B5FC133E4799000EA2C8 /* SimpleKMLLinearRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B58F133E4798000EA2C8 /* SimpleKMLLinearRing.m */; };
+		6867B5FD133E4799000EA2C8 /* SimpleKMLLineString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B591133E4798000EA2C8 /* SimpleKMLLineString.m */; };
+		6867B5FE133E4799000EA2C8 /* SimpleKMLLineStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B593133E4798000EA2C8 /* SimpleKMLLineStyle.m */; };
+		6867B5FF133E4799000EA2C8 /* SimpleKMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B595133E4798000EA2C8 /* SimpleKMLObject.m */; };
+		6867B600133E4799000EA2C8 /* SimpleKMLPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B597133E4798000EA2C8 /* SimpleKMLPlacemark.m */; };
+		6867B601133E4799000EA2C8 /* SimpleKMLPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B599133E4798000EA2C8 /* SimpleKMLPoint.m */; };
+		6867B602133E4799000EA2C8 /* SimpleKMLPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B59B133E4798000EA2C8 /* SimpleKMLPolygon.m */; };
+		6867B603133E4799000EA2C8 /* SimpleKMLPolyStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B59D133E4798000EA2C8 /* SimpleKMLPolyStyle.m */; };
+		6867B604133E4799000EA2C8 /* SimpleKMLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B59F133E4798000EA2C8 /* SimpleKMLStyle.m */; };
+		6867B605133E4799000EA2C8 /* SimpleKMLStyleSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5A1133E4798000EA2C8 /* SimpleKMLStyleSelector.m */; };
+		6867B606133E4799000EA2C8 /* SimpleKMLSubStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5A3133E4798000EA2C8 /* SimpleKMLSubStyle.m */; };
+		6867B607133E4799000EA2C8 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5A7133E4798000EA2C8 /* CXMLDocument_CreationExtensions.m */; };
+		6867B608133E4799000EA2C8 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5A9133E4798000EA2C8 /* CXMLNode_CreationExtensions.m */; };
+		6867B609133E4799000EA2C8 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5AB133E4798000EA2C8 /* CXMLDocument.m */; };
+		6867B60A133E4799000EA2C8 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5AD133E4798000EA2C8 /* CXMLDocument_PrivateExtensions.m */; };
+		6867B60B133E4799000EA2C8 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5AF133E4798000EA2C8 /* CXMLElement.m */; };
+		6867B60C133E4799000EA2C8 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5B1133E4798000EA2C8 /* CXMLElement_CreationExtensions.m */; };
+		6867B60D133E4799000EA2C8 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5B3133E4798000EA2C8 /* CXMLElement_ElementTreeExtensions.m */; };
+		6867B60E133E4799000EA2C8 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5B5133E4798000EA2C8 /* CXMLNode.m */; };
+		6867B60F133E4799000EA2C8 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5B7133E4798000EA2C8 /* CXMLNode_PrivateExtensions.m */; };
+		6867B610133E4799000EA2C8 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5B9133E4798000EA2C8 /* CXMLNode_XPathExtensions.m */; };
+		6867B611133E4799000EA2C8 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6867B5BA133E4798000EA2C8 /* LICENSE.txt */; };
+		6867B612133E4799000EA2C8 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B5BD133E4798000EA2C8 /* CTidy.m */; };
+		6867B618133E48A2000EA2C8 /* GeoTagContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B617133E489F000EA2C8 /* GeoTagContainer.m */; };
+		68957430133E4C58006F7625 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6895742F133E4C58006F7625 /* CoreMotion.framework */; };
+		68957432133E4C68006F7625 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68957431133E4C68006F7625 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		68957437133E67BB006F7625 /* list.kml in Resources */ = {isa = PBXBuildFile; fileRef = 68957436133E67BA006F7625 /* list.kml */; };
+		6895743D133E6D61006F7625 /* GeoTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6895743C133E6D5C006F7625 /* GeoTag.m */; };
+		6895745D133F4A91006F7625 /* map_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6895745C133F4A90006F7625 /* map_item.png */; };
+		68957468133F7297006F7625 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68957466133F727F006F7625 /* MenuViewController.m */; };
+		68957469133F7297006F7625 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68957467133F728E006F7625 /* MenuViewController.xib */; };
+		6895747A133F79C6006F7625 /* cameraview_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957478133F79C6006F7625 /* cameraview_icon.png */; };
+		6895747B133F79C6006F7625 /* mapview_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957479133F79C6006F7625 /* mapview_icon.png */; };
+		68957486133F7D64006F7625 /* menu_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957484133F7D64006F7625 /* menu_closed.png */; };
+		68957487133F7D64006F7625 /* menu_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957485133F7D64006F7625 /* menu_open.png */; };
+		68957495133F7EC6006F7625 /* menu_archive.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957491133F7EC6006F7625 /* menu_archive.png */; };
+		68957496133F7EC6006F7625 /* menu_friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957492133F7EC6006F7625 /* menu_friends.png */; };
+		68957497133F7EC6006F7625 /* menu_post.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957493133F7EC6006F7625 /* menu_post.png */; };
+		68957498133F7EC6006F7625 /* menu_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957494133F7EC6006F7625 /* menu_profile.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6867B4FE133E2A3B000EA2C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6867B4CD133E2A3B000EA2C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6867B4D5133E2A3B000EA2C8;
+			remoteInfo = GeoTagApp_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoTagApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6867B4DA133E2A3B000EA2C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6867B4DC133E2A3B000EA2C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6867B4DE133E2A3B000EA2C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6867B4E2133E2A3B000EA2C8 /* GeoTagApp_iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoTagApp_iOS-Info.plist"; sourceTree = "<group>"; };
+		6867B4E4133E2A3B000EA2C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6867B4E6133E2A3B000EA2C8 /* GeoTagApp_iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoTagApp_iOS-Prefix.pch"; sourceTree = "<group>"; };
+		6867B4E7133E2A3B000EA2C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6867B4E9133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoTagApp_iOSAppDelegate.h; sourceTree = "<group>"; };
+		6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoTagApp_iOSAppDelegate.m; sourceTree = "<group>"; };
+		6867B4ED133E2A3B000EA2C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6867B4FA133E2A3B000EA2C8 /* GeoTagApp_iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoTagApp_iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6867B502133E2A3B000EA2C8 /* GeoTagApp_iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoTagApp_iOSTests-Info.plist"; sourceTree = "<group>"; };
+		6867B504133E2A3B000EA2C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6867B506133E2A3B000EA2C8 /* GeoTagApp_iOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoTagApp_iOSTests-Prefix.pch"; sourceTree = "<group>"; };
+		6867B507133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoTagApp_iOSTests.h; sourceTree = "<group>"; };
+		6867B509133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoTagApp_iOSTests.m; sourceTree = "<group>"; };
+		6867B513133E2DDA000EA2C8 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		6867B514133E2DDB000EA2C8 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		6867B515133E2DDB000EA2C8 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		6867B518133E2E3A000EA2C8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6867B519133E2E3A000EA2C8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6867B51A133E2E3B000EA2C8 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		6867B51D133E37F8000EA2C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6867B524133E4798000EA2C8 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		6867B526133E4798000EA2C8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		6867B528133E4798000EA2C8 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		6867B529133E4798000EA2C8 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		6867B52A133E4798000EA2C8 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		6867B52B133E4798000EA2C8 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		6867B52C133E4798000EA2C8 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		6867B52D133E4798000EA2C8 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		6867B52E133E4798000EA2C8 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		6867B52F133E4798000EA2C8 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		6867B530133E4798000EA2C8 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		6867B532133E4798000EA2C8 /* FileInZipInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileInZipInfo.h; sourceTree = "<group>"; };
+		6867B533133E4798000EA2C8 /* FileInZipInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileInZipInfo.m; sourceTree = "<group>"; };
+		6867B534133E4798000EA2C8 /* ZipException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipException.h; sourceTree = "<group>"; };
+		6867B535133E4798000EA2C8 /* ZipException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipException.m; sourceTree = "<group>"; };
+		6867B536133E4798000EA2C8 /* ZipFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipFile.h; sourceTree = "<group>"; };
+		6867B537133E4798000EA2C8 /* ZipFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipFile.m; sourceTree = "<group>"; };
+		6867B538133E4798000EA2C8 /* ZipReadStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipReadStream.h; sourceTree = "<group>"; };
+		6867B539133E4798000EA2C8 /* ZipReadStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipReadStream.m; sourceTree = "<group>"; };
+		6867B53A133E4798000EA2C8 /* ZipWriteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipWriteStream.h; sourceTree = "<group>"; };
+		6867B53B133E4798000EA2C8 /* ZipWriteStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipWriteStream.m; sourceTree = "<group>"; };
+		6867B53D133E4798000EA2C8 /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adler32.c; sourceTree = "<group>"; };
+		6867B53E133E4798000EA2C8 /* compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compress.c; sourceTree = "<group>"; };
+		6867B53F133E4798000EA2C8 /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
+		6867B540133E4798000EA2C8 /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc32.h; sourceTree = "<group>"; };
+		6867B541133E4798000EA2C8 /* deflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deflate.c; sourceTree = "<group>"; };
+		6867B542133E4798000EA2C8 /* deflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deflate.h; sourceTree = "<group>"; };
+		6867B543133E4798000EA2C8 /* gzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gzio.c; sourceTree = "<group>"; };
+		6867B544133E4798000EA2C8 /* infback.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = infback.c; sourceTree = "<group>"; };
+		6867B545133E4798000EA2C8 /* inffast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inffast.c; sourceTree = "<group>"; };
+		6867B546133E4798000EA2C8 /* inffast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inffast.h; sourceTree = "<group>"; };
+		6867B547133E4798000EA2C8 /* inffixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inffixed.h; sourceTree = "<group>"; };
+		6867B548133E4798000EA2C8 /* inflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inflate.c; sourceTree = "<group>"; };
+		6867B549133E4798000EA2C8 /* inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inflate.h; sourceTree = "<group>"; };
+		6867B54A133E4798000EA2C8 /* inftrees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inftrees.c; sourceTree = "<group>"; };
+		6867B54B133E4798000EA2C8 /* inftrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inftrees.h; sourceTree = "<group>"; };
+		6867B54C133E4798000EA2C8 /* trees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = trees.c; sourceTree = "<group>"; };
+		6867B54D133E4798000EA2C8 /* trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trees.h; sourceTree = "<group>"; };
+		6867B54E133E4798000EA2C8 /* uncompr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uncompr.c; sourceTree = "<group>"; };
+		6867B54F133E4798000EA2C8 /* zconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zconf.h; sourceTree = "<group>"; };
+		6867B550133E4798000EA2C8 /* zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zlib.h; sourceTree = "<group>"; };
+		6867B551133E4798000EA2C8 /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zutil.c; sourceTree = "<group>"; };
+		6867B552133E4798000EA2C8 /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zutil.h; sourceTree = "<group>"; };
+		6867B553133E4798000EA2C8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		6867B57A133E4798000EA2C8 /* SimpleKML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKML.h; sourceTree = "<group>"; };
+		6867B57B133E4798000EA2C8 /* SimpleKML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKML.m; sourceTree = "<group>"; };
+		6867B57C133E4798000EA2C8 /* SimpleKML_UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKML_UIImage.h; sourceTree = "<group>"; };
+		6867B57D133E4798000EA2C8 /* SimpleKML_UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKML_UIImage.m; sourceTree = "<group>"; };
+		6867B57E133E4798000EA2C8 /* SimpleKMLBalloonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLBalloonStyle.h; sourceTree = "<group>"; };
+		6867B57F133E4798000EA2C8 /* SimpleKMLBalloonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLBalloonStyle.m; sourceTree = "<group>"; };
+		6867B580133E4798000EA2C8 /* SimpleKMLColorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLColorStyle.h; sourceTree = "<group>"; };
+		6867B581133E4798000EA2C8 /* SimpleKMLColorStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLColorStyle.m; sourceTree = "<group>"; };
+		6867B582133E4798000EA2C8 /* SimpleKMLContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLContainer.h; sourceTree = "<group>"; };
+		6867B583133E4798000EA2C8 /* SimpleKMLContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLContainer.m; sourceTree = "<group>"; };
+		6867B584133E4798000EA2C8 /* SimpleKMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLDocument.h; sourceTree = "<group>"; };
+		6867B585133E4798000EA2C8 /* SimpleKMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLDocument.m; sourceTree = "<group>"; };
+		6867B586133E4798000EA2C8 /* SimpleKMLFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLFeature.h; sourceTree = "<group>"; };
+		6867B587133E4798000EA2C8 /* SimpleKMLFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLFeature.m; sourceTree = "<group>"; };
+		6867B588133E4798000EA2C8 /* SimpleKMLFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLFolder.h; sourceTree = "<group>"; };
+		6867B589133E4798000EA2C8 /* SimpleKMLFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLFolder.m; sourceTree = "<group>"; };
+		6867B58A133E4798000EA2C8 /* SimpleKMLGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLGeometry.h; sourceTree = "<group>"; };
+		6867B58B133E4798000EA2C8 /* SimpleKMLGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLGeometry.m; sourceTree = "<group>"; };
+		6867B58C133E4798000EA2C8 /* SimpleKMLIconStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLIconStyle.h; sourceTree = "<group>"; };
+		6867B58D133E4798000EA2C8 /* SimpleKMLIconStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLIconStyle.m; sourceTree = "<group>"; };
+		6867B58E133E4798000EA2C8 /* SimpleKMLLinearRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLLinearRing.h; sourceTree = "<group>"; };
+		6867B58F133E4798000EA2C8 /* SimpleKMLLinearRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLLinearRing.m; sourceTree = "<group>"; };
+		6867B590133E4798000EA2C8 /* SimpleKMLLineString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLLineString.h; sourceTree = "<group>"; };
+		6867B591133E4798000EA2C8 /* SimpleKMLLineString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLLineString.m; sourceTree = "<group>"; };
+		6867B592133E4798000EA2C8 /* SimpleKMLLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLLineStyle.h; sourceTree = "<group>"; };
+		6867B593133E4798000EA2C8 /* SimpleKMLLineStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLLineStyle.m; sourceTree = "<group>"; };
+		6867B594133E4798000EA2C8 /* SimpleKMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLObject.h; sourceTree = "<group>"; };
+		6867B595133E4798000EA2C8 /* SimpleKMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLObject.m; sourceTree = "<group>"; };
+		6867B596133E4798000EA2C8 /* SimpleKMLPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLPlacemark.h; sourceTree = "<group>"; };
+		6867B597133E4798000EA2C8 /* SimpleKMLPlacemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLPlacemark.m; sourceTree = "<group>"; };
+		6867B598133E4798000EA2C8 /* SimpleKMLPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLPoint.h; sourceTree = "<group>"; };
+		6867B599133E4798000EA2C8 /* SimpleKMLPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLPoint.m; sourceTree = "<group>"; };
+		6867B59A133E4798000EA2C8 /* SimpleKMLPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLPolygon.h; sourceTree = "<group>"; };
+		6867B59B133E4798000EA2C8 /* SimpleKMLPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLPolygon.m; sourceTree = "<group>"; };
+		6867B59C133E4798000EA2C8 /* SimpleKMLPolyStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLPolyStyle.h; sourceTree = "<group>"; };
+		6867B59D133E4798000EA2C8 /* SimpleKMLPolyStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLPolyStyle.m; sourceTree = "<group>"; };
+		6867B59E133E4798000EA2C8 /* SimpleKMLStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLStyle.h; sourceTree = "<group>"; };
+		6867B59F133E4798000EA2C8 /* SimpleKMLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLStyle.m; sourceTree = "<group>"; };
+		6867B5A0133E4798000EA2C8 /* SimpleKMLStyleSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLStyleSelector.h; sourceTree = "<group>"; };
+		6867B5A1133E4798000EA2C8 /* SimpleKMLStyleSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLStyleSelector.m; sourceTree = "<group>"; };
+		6867B5A2133E4798000EA2C8 /* SimpleKMLSubStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleKMLSubStyle.h; sourceTree = "<group>"; };
+		6867B5A3133E4798000EA2C8 /* SimpleKMLSubStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleKMLSubStyle.m; sourceTree = "<group>"; };
+		6867B5A6133E4798000EA2C8 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		6867B5A7133E4798000EA2C8 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		6867B5A8133E4798000EA2C8 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		6867B5A9133E4798000EA2C8 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		6867B5AA133E4798000EA2C8 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		6867B5AB133E4798000EA2C8 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		6867B5AC133E4798000EA2C8 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		6867B5AD133E4798000EA2C8 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		6867B5AE133E4798000EA2C8 /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		6867B5AF133E4798000EA2C8 /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		6867B5B0133E4798000EA2C8 /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		6867B5B1133E4798000EA2C8 /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		6867B5B2133E4798000EA2C8 /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		6867B5B3133E4798000EA2C8 /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		6867B5B4133E4798000EA2C8 /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		6867B5B5133E4798000EA2C8 /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		6867B5B6133E4798000EA2C8 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		6867B5B7133E4798000EA2C8 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		6867B5B8133E4798000EA2C8 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		6867B5B9133E4798000EA2C8 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		6867B5BA133E4798000EA2C8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		6867B5BC133E4798000EA2C8 /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		6867B5BD133E4798000EA2C8 /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		6867B5BE133E4798000EA2C8 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		6867B616133E489E000EA2C8 /* GeoTagContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoTagContainer.h; sourceTree = "<group>"; };
+		6867B617133E489F000EA2C8 /* GeoTagContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoTagContainer.m; sourceTree = "<group>"; };
+		6895742F133E4C58006F7625 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		68957431133E4C68006F7625 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		68957436133E67BA006F7625 /* list.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = list.kml; path = data/list.kml; sourceTree = "<group>"; };
+		6895743B133E6D5A006F7625 /* GeoTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoTag.h; sourceTree = "<group>"; };
+		6895743C133E6D5C006F7625 /* GeoTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoTag.m; sourceTree = "<group>"; };
+		6895745C133F4A90006F7625 /* map_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_item.png; path = data/images/map_item.png; sourceTree = "<group>"; };
+		68957465133F727A006F7625 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		68957466133F727F006F7625 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		68957467133F728E006F7625 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		68957478133F79C6006F7625 /* cameraview_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cameraview_icon.png; path = data/images/cameraview_icon.png; sourceTree = "<group>"; };
+		68957479133F79C6006F7625 /* mapview_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mapview_icon.png; path = data/images/mapview_icon.png; sourceTree = "<group>"; };
+		68957484133F7D64006F7625 /* menu_closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_closed.png; path = data/images/menu_closed.png; sourceTree = "<group>"; };
+		68957485133F7D64006F7625 /* menu_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_open.png; path = data/images/menu_open.png; sourceTree = "<group>"; };
+		68957491133F7EC6006F7625 /* menu_archive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_archive.png; path = data/images/menu_archive.png; sourceTree = "<group>"; };
+		68957492133F7EC6006F7625 /* menu_friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_friends.png; path = data/images/menu_friends.png; sourceTree = "<group>"; };
+		68957493133F7EC6006F7625 /* menu_post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_post.png; path = data/images/menu_post.png; sourceTree = "<group>"; };
+		68957494133F7EC6006F7625 /* menu_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_profile.png; path = data/images/menu_profile.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6867B4D3133E2A3B000EA2C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68957432133E4C68006F7625 /* CoreLocation.framework in Frameworks */,
+				68957430133E4C58006F7625 /* CoreMotion.framework in Frameworks */,
+				6867B51E133E37F8000EA2C8 /* MapKit.framework in Frameworks */,
+				6867B4DB133E2A3B000EA2C8 /* UIKit.framework in Frameworks */,
+				6867B4DD133E2A3B000EA2C8 /* Foundation.framework in Frameworks */,
+				6867B4DF133E2A3B000EA2C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6867B4F6133E2A3B000EA2C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6867B4FB133E2A3B000EA2C8 /* UIKit.framework in Frameworks */,
+				6867B4FC133E2A3B000EA2C8 /* Foundation.framework in Frameworks */,
+				6867B4FD133E2A3B000EA2C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6867B4CB133E2A3B000EA2C8 = {
+			isa = PBXGroup;
+			children = (
+				6895746E133F7556006F7625 /* Resources */,
+				68957436133E67BA006F7625 /* list.kml */,
+				6867B522133E4798000EA2C8 /* lib */,
+				6867B4E0133E2A3B000EA2C8 /* GeoTagApp_iOS */,
+				6867B500133E2A3B000EA2C8 /* GeoTagApp_iOSTests */,
+				6867B4D9133E2A3B000EA2C8 /* Frameworks */,
+				6867B4D7133E2A3B000EA2C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6867B4D7133E2A3B000EA2C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */,
+				6867B4FA133E2A3B000EA2C8 /* GeoTagApp_iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6867B4D9133E2A3B000EA2C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68957431133E4C68006F7625 /* CoreLocation.framework */,
+				6895742F133E4C58006F7625 /* CoreMotion.framework */,
+				6867B51D133E37F8000EA2C8 /* MapKit.framework */,
+				6867B4DA133E2A3B000EA2C8 /* UIKit.framework */,
+				6867B4DC133E2A3B000EA2C8 /* Foundation.framework */,
+				6867B4DE133E2A3B000EA2C8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6867B4E0133E2A3B000EA2C8 /* GeoTagApp_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6867B4E9133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.h */,
+				6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */,
+				6867B4EC133E2A3B000EA2C8 /* MainWindow.xib */,
+				6867B4E1133E2A3B000EA2C8 /* Supporting Files */,
+				6867B513133E2DDA000EA2C8 /* CameraViewController.h */,
+				6867B514133E2DDB000EA2C8 /* CameraViewController.m */,
+				6867B515133E2DDB000EA2C8 /* CameraViewController.xib */,
+				6867B518133E2E3A000EA2C8 /* MapViewController.h */,
+				6867B519133E2E3A000EA2C8 /* MapViewController.m */,
+				6867B51A133E2E3B000EA2C8 /* MapViewController.xib */,
+				6867B616133E489E000EA2C8 /* GeoTagContainer.h */,
+				6867B617133E489F000EA2C8 /* GeoTagContainer.m */,
+				6895743B133E6D5A006F7625 /* GeoTag.h */,
+				6895743C133E6D5C006F7625 /* GeoTag.m */,
+				68957465133F727A006F7625 /* MenuViewController.h */,
+				68957466133F727F006F7625 /* MenuViewController.m */,
+				68957467133F728E006F7625 /* MenuViewController.xib */,
+			);
+			path = GeoTagApp_iOS;
+			sourceTree = "<group>";
+		};
+		6867B4E1133E2A3B000EA2C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6867B4E2133E2A3B000EA2C8 /* GeoTagApp_iOS-Info.plist */,
+				6867B4E3133E2A3B000EA2C8 /* InfoPlist.strings */,
+				6867B4E6133E2A3B000EA2C8 /* GeoTagApp_iOS-Prefix.pch */,
+				6867B4E7133E2A3B000EA2C8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6867B500133E2A3B000EA2C8 /* GeoTagApp_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				6867B507133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h */,
+				6867B509133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m */,
+				6867B501133E2A3B000EA2C8 /* Supporting Files */,
+			);
+			path = GeoTagApp_iOSTests;
+			sourceTree = "<group>";
+		};
+		6867B501133E2A3B000EA2C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6867B502133E2A3B000EA2C8 /* GeoTagApp_iOSTests-Info.plist */,
+				6867B503133E2A3B000EA2C8 /* InfoPlist.strings */,
+				6867B506133E2A3B000EA2C8 /* GeoTagApp_iOSTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6867B522133E4798000EA2C8 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6867B523133E4798000EA2C8 /* SimpleKML */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		6867B523133E4798000EA2C8 /* SimpleKML */ = {
+			isa = PBXGroup;
+			children = (
+				6867B524133E4798000EA2C8 /* LICENSE.md */,
+				6867B525133E4798000EA2C8 /* Objective-Zip */,
+				6867B553133E4798000EA2C8 /* README.md */,
+				6867B57A133E4798000EA2C8 /* SimpleKML.h */,
+				6867B57B133E4798000EA2C8 /* SimpleKML.m */,
+				6867B57C133E4798000EA2C8 /* SimpleKML_UIImage.h */,
+				6867B57D133E4798000EA2C8 /* SimpleKML_UIImage.m */,
+				6867B57E133E4798000EA2C8 /* SimpleKMLBalloonStyle.h */,
+				6867B57F133E4798000EA2C8 /* SimpleKMLBalloonStyle.m */,
+				6867B580133E4798000EA2C8 /* SimpleKMLColorStyle.h */,
+				6867B581133E4798000EA2C8 /* SimpleKMLColorStyle.m */,
+				6867B582133E4798000EA2C8 /* SimpleKMLContainer.h */,
+				6867B583133E4798000EA2C8 /* SimpleKMLContainer.m */,
+				6867B584133E4798000EA2C8 /* SimpleKMLDocument.h */,
+				6867B585133E4798000EA2C8 /* SimpleKMLDocument.m */,
+				6867B586133E4798000EA2C8 /* SimpleKMLFeature.h */,
+				6867B587133E4798000EA2C8 /* SimpleKMLFeature.m */,
+				6867B588133E4798000EA2C8 /* SimpleKMLFolder.h */,
+				6867B589133E4798000EA2C8 /* SimpleKMLFolder.m */,
+				6867B58A133E4798000EA2C8 /* SimpleKMLGeometry.h */,
+				6867B58B133E4798000EA2C8 /* SimpleKMLGeometry.m */,
+				6867B58C133E4798000EA2C8 /* SimpleKMLIconStyle.h */,
+				6867B58D133E4798000EA2C8 /* SimpleKMLIconStyle.m */,
+				6867B58E133E4798000EA2C8 /* SimpleKMLLinearRing.h */,
+				6867B58F133E4798000EA2C8 /* SimpleKMLLinearRing.m */,
+				6867B590133E4798000EA2C8 /* SimpleKMLLineString.h */,
+				6867B591133E4798000EA2C8 /* SimpleKMLLineString.m */,
+				6867B592133E4798000EA2C8 /* SimpleKMLLineStyle.h */,
+				6867B593133E4798000EA2C8 /* SimpleKMLLineStyle.m */,
+				6867B594133E4798000EA2C8 /* SimpleKMLObject.h */,
+				6867B595133E4798000EA2C8 /* SimpleKMLObject.m */,
+				6867B596133E4798000EA2C8 /* SimpleKMLPlacemark.h */,
+				6867B597133E4798000EA2C8 /* SimpleKMLPlacemark.m */,
+				6867B598133E4798000EA2C8 /* SimpleKMLPoint.h */,
+				6867B599133E4798000EA2C8 /* SimpleKMLPoint.m */,
+				6867B59A133E4798000EA2C8 /* SimpleKMLPolygon.h */,
+				6867B59B133E4798000EA2C8 /* SimpleKMLPolygon.m */,
+				6867B59C133E4798000EA2C8 /* SimpleKMLPolyStyle.h */,
+				6867B59D133E4798000EA2C8 /* SimpleKMLPolyStyle.m */,
+				6867B59E133E4798000EA2C8 /* SimpleKMLStyle.h */,
+				6867B59F133E4798000EA2C8 /* SimpleKMLStyle.m */,
+				6867B5A0133E4798000EA2C8 /* SimpleKMLStyleSelector.h */,
+				6867B5A1133E4798000EA2C8 /* SimpleKMLStyleSelector.m */,
+				6867B5A2133E4798000EA2C8 /* SimpleKMLSubStyle.h */,
+				6867B5A3133E4798000EA2C8 /* SimpleKMLSubStyle.m */,
+				6867B5A4133E4798000EA2C8 /* TouchXML */,
+			);
+			path = SimpleKML;
+			sourceTree = "<group>";
+		};
+		6867B525133E4798000EA2C8 /* Objective-Zip */ = {
+			isa = PBXGroup;
+			children = (
+				6867B526133E4798000EA2C8 /* LICENSE.txt */,
+				6867B527133E4798000EA2C8 /* MiniZip */,
+				6867B531133E4798000EA2C8 /* Objective-Zip */,
+				6867B53C133E4798000EA2C8 /* ZLib */,
+			);
+			path = "Objective-Zip";
+			sourceTree = "<group>";
+		};
+		6867B527133E4798000EA2C8 /* MiniZip */ = {
+			isa = PBXGroup;
+			children = (
+				6867B528133E4798000EA2C8 /* crypt.h */,
+				6867B529133E4798000EA2C8 /* ioapi.c */,
+				6867B52A133E4798000EA2C8 /* ioapi.h */,
+				6867B52B133E4798000EA2C8 /* mztools.c */,
+				6867B52C133E4798000EA2C8 /* mztools.h */,
+				6867B52D133E4798000EA2C8 /* unzip.c */,
+				6867B52E133E4798000EA2C8 /* unzip.h */,
+				6867B52F133E4798000EA2C8 /* zip.c */,
+				6867B530133E4798000EA2C8 /* zip.h */,
+			);
+			path = MiniZip;
+			sourceTree = "<group>";
+		};
+		6867B531133E4798000EA2C8 /* Objective-Zip */ = {
+			isa = PBXGroup;
+			children = (
+				6867B532133E4798000EA2C8 /* FileInZipInfo.h */,
+				6867B533133E4798000EA2C8 /* FileInZipInfo.m */,
+				6867B534133E4798000EA2C8 /* ZipException.h */,
+				6867B535133E4798000EA2C8 /* ZipException.m */,
+				6867B536133E4798000EA2C8 /* ZipFile.h */,
+				6867B537133E4798000EA2C8 /* ZipFile.m */,
+				6867B538133E4798000EA2C8 /* ZipReadStream.h */,
+				6867B539133E4798000EA2C8 /* ZipReadStream.m */,
+				6867B53A133E4798000EA2C8 /* ZipWriteStream.h */,
+				6867B53B133E4798000EA2C8 /* ZipWriteStream.m */,
+			);
+			path = "Objective-Zip";
+			sourceTree = "<group>";
+		};
+		6867B53C133E4798000EA2C8 /* ZLib */ = {
+			isa = PBXGroup;
+			children = (
+				6867B53D133E4798000EA2C8 /* adler32.c */,
+				6867B53E133E4798000EA2C8 /* compress.c */,
+				6867B53F133E4798000EA2C8 /* crc32.c */,
+				6867B540133E4798000EA2C8 /* crc32.h */,
+				6867B541133E4798000EA2C8 /* deflate.c */,
+				6867B542133E4798000EA2C8 /* deflate.h */,
+				6867B543133E4798000EA2C8 /* gzio.c */,
+				6867B544133E4798000EA2C8 /* infback.c */,
+				6867B545133E4798000EA2C8 /* inffast.c */,
+				6867B546133E4798000EA2C8 /* inffast.h */,
+				6867B547133E4798000EA2C8 /* inffixed.h */,
+				6867B548133E4798000EA2C8 /* inflate.c */,
+				6867B549133E4798000EA2C8 /* inflate.h */,
+				6867B54A133E4798000EA2C8 /* inftrees.c */,
+				6867B54B133E4798000EA2C8 /* inftrees.h */,
+				6867B54C133E4798000EA2C8 /* trees.c */,
+				6867B54D133E4798000EA2C8 /* trees.h */,
+				6867B54E133E4798000EA2C8 /* uncompr.c */,
+				6867B54F133E4798000EA2C8 /* zconf.h */,
+				6867B550133E4798000EA2C8 /* zlib.h */,
+				6867B551133E4798000EA2C8 /* zutil.c */,
+				6867B552133E4798000EA2C8 /* zutil.h */,
+			);
+			path = ZLib;
+			sourceTree = "<group>";
+		};
+		6867B5A4133E4798000EA2C8 /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				6867B5A5133E4798000EA2C8 /* Creation */,
+				6867B5AA133E4798000EA2C8 /* CXMLDocument.h */,
+				6867B5AB133E4798000EA2C8 /* CXMLDocument.m */,
+				6867B5AC133E4798000EA2C8 /* CXMLDocument_PrivateExtensions.h */,
+				6867B5AD133E4798000EA2C8 /* CXMLDocument_PrivateExtensions.m */,
+				6867B5AE133E4798000EA2C8 /* CXMLElement.h */,
+				6867B5AF133E4798000EA2C8 /* CXMLElement.m */,
+				6867B5B0133E4798000EA2C8 /* CXMLElement_CreationExtensions.h */,
+				6867B5B1133E4798000EA2C8 /* CXMLElement_CreationExtensions.m */,
+				6867B5B2133E4798000EA2C8 /* CXMLElement_ElementTreeExtensions.h */,
+				6867B5B3133E4798000EA2C8 /* CXMLElement_ElementTreeExtensions.m */,
+				6867B5B4133E4798000EA2C8 /* CXMLNode.h */,
+				6867B5B5133E4798000EA2C8 /* CXMLNode.m */,
+				6867B5B6133E4798000EA2C8 /* CXMLNode_PrivateExtensions.h */,
+				6867B5B7133E4798000EA2C8 /* CXMLNode_PrivateExtensions.m */,
+				6867B5B8133E4798000EA2C8 /* CXMLNode_XPathExtensions.h */,
+				6867B5B9133E4798000EA2C8 /* CXMLNode_XPathExtensions.m */,
+				6867B5BA133E4798000EA2C8 /* LICENSE.txt */,
+				6867B5BB133E4798000EA2C8 /* Tidy */,
+				6867B5BE133E4798000EA2C8 /* TouchXML.h */,
+			);
+			path = TouchXML;
+			sourceTree = "<group>";
+		};
+		6867B5A5133E4798000EA2C8 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				6867B5A6133E4798000EA2C8 /* CXMLDocument_CreationExtensions.h */,
+				6867B5A7133E4798000EA2C8 /* CXMLDocument_CreationExtensions.m */,
+				6867B5A8133E4798000EA2C8 /* CXMLNode_CreationExtensions.h */,
+				6867B5A9133E4798000EA2C8 /* CXMLNode_CreationExtensions.m */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		6867B5BB133E4798000EA2C8 /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				6867B5BC133E4798000EA2C8 /* CTidy.h */,
+				6867B5BD133E4798000EA2C8 /* CTidy.m */,
+			);
+			path = Tidy;
+			sourceTree = "<group>";
+		};
+		6895746E133F7556006F7625 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68957491133F7EC6006F7625 /* menu_archive.png */,
+				68957492133F7EC6006F7625 /* menu_friends.png */,
+				68957493133F7EC6006F7625 /* menu_post.png */,
+				68957494133F7EC6006F7625 /* menu_profile.png */,
+				68957484133F7D64006F7625 /* menu_closed.png */,
+				68957485133F7D64006F7625 /* menu_open.png */,
+				68957478133F79C6006F7625 /* cameraview_icon.png */,
+				68957479133F79C6006F7625 /* mapview_icon.png */,
+				6895745C133F4A90006F7625 /* map_item.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6867B4D5133E2A3B000EA2C8 /* GeoTagApp_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6867B50D133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "GeoTagApp_iOS" */;
+			buildPhases = (
+				6867B4D2133E2A3B000EA2C8 /* Sources */,
+				6867B4D3133E2A3B000EA2C8 /* Frameworks */,
+				6867B4D4133E2A3B000EA2C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoTagApp_iOS;
+			productName = GeoTagApp_iOS;
+			productReference = 6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6867B4F9133E2A3B000EA2C8 /* GeoTagApp_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6867B510133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "GeoTagApp_iOSTests" */;
+			buildPhases = (
+				6867B4F5133E2A3B000EA2C8 /* Sources */,
+				6867B4F6133E2A3B000EA2C8 /* Frameworks */,
+				6867B4F7133E2A3B000EA2C8 /* Resources */,
+				6867B4F8133E2A3B000EA2C8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6867B4FF133E2A3B000EA2C8 /* PBXTargetDependency */,
+			);
+			name = GeoTagApp_iOSTests;
+			productName = GeoTagApp_iOSTests;
+			productReference = 6867B4FA133E2A3B000EA2C8 /* GeoTagApp_iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6867B4CD133E2A3B000EA2C8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6867B4D0133E2A3B000EA2C8 /* Build configuration list for PBXProject "GeoTagApp_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6867B4CB133E2A3B000EA2C8;
+			productRefGroup = 6867B4D7133E2A3B000EA2C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6867B4D5133E2A3B000EA2C8 /* GeoTagApp_iOS */,
+				6867B4F9133E2A3B000EA2C8 /* GeoTagApp_iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6867B4D4133E2A3B000EA2C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6867B4E5133E2A3B000EA2C8 /* InfoPlist.strings in Resources */,
+				6867B4EE133E2A3B000EA2C8 /* MainWindow.xib in Resources */,
+				6867B517133E2DDB000EA2C8 /* CameraViewController.xib in Resources */,
+				6867B51C133E2E3C000EA2C8 /* MapViewController.xib in Resources */,
+				6867B5C2133E4799000EA2C8 /* LICENSE.md in Resources */,
+				6867B5C3133E4799000EA2C8 /* LICENSE.txt in Resources */,
+				6867B5D9133E4799000EA2C8 /* README.md in Resources */,
+				6867B611133E4799000EA2C8 /* LICENSE.txt in Resources */,
+				68957437133E67BB006F7625 /* list.kml in Resources */,
+				6895745D133F4A91006F7625 /* map_item.png in Resources */,
+				68957469133F7297006F7625 /* MenuViewController.xib in Resources */,
+				6895747A133F79C6006F7625 /* cameraview_icon.png in Resources */,
+				6895747B133F79C6006F7625 /* mapview_icon.png in Resources */,
+				68957486133F7D64006F7625 /* menu_closed.png in Resources */,
+				68957487133F7D64006F7625 /* menu_open.png in Resources */,
+				68957495133F7EC6006F7625 /* menu_archive.png in Resources */,
+				68957496133F7EC6006F7625 /* menu_friends.png in Resources */,
+				68957497133F7EC6006F7625 /* menu_post.png in Resources */,
+				68957498133F7EC6006F7625 /* menu_profile.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6867B4F7133E2A3B000EA2C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6867B505133E2A3B000EA2C8 /* InfoPlist.strings in Resources */,
+				6867B508133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6867B4F8133E2A3B000EA2C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6867B4D2133E2A3B000EA2C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6867B4E8133E2A3B000EA2C8 /* main.m in Sources */,
+				6867B4EB133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m in Sources */,
+				6867B516133E2DDB000EA2C8 /* CameraViewController.m in Sources */,
+				6867B51B133E2E3C000EA2C8 /* MapViewController.m in Sources */,
+				6867B5C4133E4799000EA2C8 /* ioapi.c in Sources */,
+				6867B5C5133E4799000EA2C8 /* mztools.c in Sources */,
+				6867B5C6133E4799000EA2C8 /* unzip.c in Sources */,
+				6867B5C7133E4799000EA2C8 /* zip.c in Sources */,
+				6867B5C8133E4799000EA2C8 /* FileInZipInfo.m in Sources */,
+				6867B5C9133E4799000EA2C8 /* ZipException.m in Sources */,
+				6867B5CA133E4799000EA2C8 /* ZipFile.m in Sources */,
+				6867B5CB133E4799000EA2C8 /* ZipReadStream.m in Sources */,
+				6867B5CC133E4799000EA2C8 /* ZipWriteStream.m in Sources */,
+				6867B5CD133E4799000EA2C8 /* adler32.c in Sources */,
+				6867B5CE133E4799000EA2C8 /* compress.c in Sources */,
+				6867B5CF133E4799000EA2C8 /* crc32.c in Sources */,
+				6867B5D0133E4799000EA2C8 /* deflate.c in Sources */,
+				6867B5D1133E4799000EA2C8 /* gzio.c in Sources */,
+				6867B5D2133E4799000EA2C8 /* infback.c in Sources */,
+				6867B5D3133E4799000EA2C8 /* inffast.c in Sources */,
+				6867B5D4133E4799000EA2C8 /* inflate.c in Sources */,
+				6867B5D5133E4799000EA2C8 /* inftrees.c in Sources */,
+				6867B5D6133E4799000EA2C8 /* trees.c in Sources */,
+				6867B5D7133E4799000EA2C8 /* uncompr.c in Sources */,
+				6867B5D8133E4799000EA2C8 /* zutil.c in Sources */,
+				6867B5F2133E4799000EA2C8 /* SimpleKML.m in Sources */,
+				6867B5F3133E4799000EA2C8 /* SimpleKML_UIImage.m in Sources */,
+				6867B5F4133E4799000EA2C8 /* SimpleKMLBalloonStyle.m in Sources */,
+				6867B5F5133E4799000EA2C8 /* SimpleKMLColorStyle.m in Sources */,
+				6867B5F6133E4799000EA2C8 /* SimpleKMLContainer.m in Sources */,
+				6867B5F7133E4799000EA2C8 /* SimpleKMLDocument.m in Sources */,
+				6867B5F8133E4799000EA2C8 /* SimpleKMLFeature.m in Sources */,
+				6867B5F9133E4799000EA2C8 /* SimpleKMLFolder.m in Sources */,
+				6867B5FA133E4799000EA2C8 /* SimpleKMLGeometry.m in Sources */,
+				6867B5FB133E4799000EA2C8 /* SimpleKMLIconStyle.m in Sources */,
+				6867B5FC133E4799000EA2C8 /* SimpleKMLLinearRing.m in Sources */,
+				6867B5FD133E4799000EA2C8 /* SimpleKMLLineString.m in Sources */,
+				6867B5FE133E4799000EA2C8 /* SimpleKMLLineStyle.m in Sources */,
+				6867B5FF133E4799000EA2C8 /* SimpleKMLObject.m in Sources */,
+				6867B600133E4799000EA2C8 /* SimpleKMLPlacemark.m in Sources */,
+				6867B601133E4799000EA2C8 /* SimpleKMLPoint.m in Sources */,
+				6867B602133E4799000EA2C8 /* SimpleKMLPolygon.m in Sources */,
+				6867B603133E4799000EA2C8 /* SimpleKMLPolyStyle.m in Sources */,
+				6867B604133E4799000EA2C8 /* SimpleKMLStyle.m in Sources */,
+				6867B605133E4799000EA2C8 /* SimpleKMLStyleSelector.m in Sources */,
+				6867B606133E4799000EA2C8 /* SimpleKMLSubStyle.m in Sources */,
+				6867B607133E4799000EA2C8 /* CXMLDocument_CreationExtensions.m in Sources */,
+				6867B608133E4799000EA2C8 /* CXMLNode_CreationExtensions.m in Sources */,
+				6867B609133E4799000EA2C8 /* CXMLDocument.m in Sources */,
+				6867B60A133E4799000EA2C8 /* CXMLDocument_PrivateExtensions.m in Sources */,
+				6867B60B133E4799000EA2C8 /* CXMLElement.m in Sources */,
+				6867B60C133E4799000EA2C8 /* CXMLElement_CreationExtensions.m in Sources */,
+				6867B60D133E4799000EA2C8 /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				6867B60E133E4799000EA2C8 /* CXMLNode.m in Sources */,
+				6867B60F133E4799000EA2C8 /* CXMLNode_PrivateExtensions.m in Sources */,
+				6867B610133E4799000EA2C8 /* CXMLNode_XPathExtensions.m in Sources */,
+				6867B612133E4799000EA2C8 /* CTidy.m in Sources */,
+				6867B618133E48A2000EA2C8 /* GeoTagContainer.m in Sources */,
+				6895743D133E6D61006F7625 /* GeoTag.m in Sources */,
+				68957468133F7297006F7625 /* MenuViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6867B4F5133E2A3B000EA2C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6867B50A133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6867B4FF133E2A3B000EA2C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6867B4D5133E2A3B000EA2C8 /* GeoTagApp_iOS */;
+			targetProxy = 6867B4FE133E2A3B000EA2C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6867B4E3133E2A3B000EA2C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6867B4E4133E2A3B000EA2C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6867B4EC133E2A3B000EA2C8 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6867B4ED133E2A3B000EA2C8 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		6867B503133E2A3B000EA2C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6867B504133E2A3B000EA2C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6867B50B133E2A3B000EA2C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6867B50C133E2A3B000EA2C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		6867B50E133E2A3B000EA2C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoTagApp_iOS/GeoTagApp_iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "GeoTagApp_iOS/GeoTagApp_iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6867B50F133E2A3B000EA2C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoTagApp_iOS/GeoTagApp_iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "GeoTagApp_iOS/GeoTagApp_iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6867B511133E2A3B000EA2C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoTagApp_iOS.app/GeoTagApp_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoTagApp_iOSTests/GeoTagApp_iOSTests-Prefix.pch";
+				INFOPLIST_FILE = "GeoTagApp_iOSTests/GeoTagApp_iOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6867B512133E2A3B000EA2C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoTagApp_iOS.app/GeoTagApp_iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoTagApp_iOSTests/GeoTagApp_iOSTests-Prefix.pch";
+				INFOPLIST_FILE = "GeoTagApp_iOSTests/GeoTagApp_iOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6867B4D0133E2A3B000EA2C8 /* Build configuration list for PBXProject "GeoTagApp_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6867B50B133E2A3B000EA2C8 /* Debug */,
+				6867B50C133E2A3B000EA2C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6867B50D133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "GeoTagApp_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6867B50E133E2A3B000EA2C8 /* Debug */,
+				6867B50F133E2A3B000EA2C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6867B510133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "GeoTagApp_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6867B511133E2A3B000EA2C8 /* Debug */,
+				6867B512133E2A3B000EA2C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6867B4CD133E2A3B000EA2C8 /* Project object */;
+}

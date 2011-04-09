@@ -98,6 +98,8 @@
 		68957496133F7EC6006F7625 /* menu_friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957492133F7EC6006F7625 /* menu_friends.png */; };
 		68957497133F7EC6006F7625 /* menu_post.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957493133F7EC6006F7625 /* menu_post.png */; };
 		68957498133F7EC6006F7625 /* menu_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 68957494133F7EC6006F7625 /* menu_profile.png */; };
+		6898F8001350EB0A009BB5D5 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6898F7FF1350EB0A009BB5D5 /* Vector.m */; };
+		6898F8041350EEBF009BB5D5 /* Quaternion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6898F8031350EEBF009BB5D5 /* Quaternion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +266,10 @@
 		68957492133F7EC6006F7625 /* menu_friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_friends.png; path = data/images/menu_friends.png; sourceTree = "<group>"; };
 		68957493133F7EC6006F7625 /* menu_post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_post.png; path = data/images/menu_post.png; sourceTree = "<group>"; };
 		68957494133F7EC6006F7625 /* menu_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_profile.png; path = data/images/menu_profile.png; sourceTree = "<group>"; };
+		6898F7FE1350EB0A009BB5D5 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		6898F7FF1350EB0A009BB5D5 /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vector.m; sourceTree = "<group>"; };
+		6898F8021350EEBF009BB5D5 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
+		6898F8031350EEBF009BB5D5 /* Quaternion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quaternion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +337,8 @@
 		6867B4E0133E2A3B000EA2C8 /* GeoTagApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6898F7FE1350EB0A009BB5D5 /* Vector.h */,
+				6898F7FF1350EB0A009BB5D5 /* Vector.m */,
 				6867B4E9133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.h */,
 				6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */,
 				6867B4EC133E2A3B000EA2C8 /* MainWindow.xib */,
@@ -348,6 +356,8 @@
 				68957465133F727A006F7625 /* MenuViewController.h */,
 				68957466133F727F006F7625 /* MenuViewController.m */,
 				68957467133F728E006F7625 /* MenuViewController.xib */,
+				6898F8021350EEBF009BB5D5 /* Quaternion.h */,
+				6898F8031350EEBF009BB5D5 /* Quaternion.m */,
 			);
 			path = GeoTagApp_iOS;
 			sourceTree = "<group>";
@@ -761,6 +771,8 @@
 				6867B618133E48A2000EA2C8 /* GeoTagContainer.m in Sources */,
 				6895743D133E6D61006F7625 /* GeoTag.m in Sources */,
 				68957468133F7297006F7625 /* MenuViewController.m in Sources */,
+				6898F8001350EB0A009BB5D5 /* Vector.m in Sources */,
+				6898F8041350EEBF009BB5D5 /* Quaternion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +826,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -823,6 +835,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -831,7 +844,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -839,6 +852,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

@@ -33,7 +33,7 @@
     
     CLLocation *location;
     CLLocationDirection heading;
-    
+    Vector* rotation;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -59,7 +59,7 @@
 
 // TouchDelegate
 
-- (void)switchViews;
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event;
+- (void) switchViews;
+- (UIView*) hitTest: (CGPoint)point withEvent: (UIEvent *)event;
 
 @end

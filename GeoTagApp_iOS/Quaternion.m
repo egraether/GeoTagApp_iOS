@@ -38,6 +38,18 @@
     return self;
 }
 
+- (Quaternion*) initWithAngle: (float)phi andAxis: (Vector*)axis {
+    
+    [axis print];
+    
+    self = [super init];
+    
+    a = cosf(phi / 2);
+    b = [[axis div: [axis norm]] mul: sinf(phi / 2)];
+    
+    return self;
+}
+
 - (Quaternion*) add: (Quaternion*)q {
 
     Quaternion* r = [[Quaternion alloc] init];
@@ -87,16 +99,30 @@
     
 }
 
-+ (Vector*) rotate: (Vector*)vector byAngle: (float)phi around: (Vector*)axis {
++ (Quaternion*) slerpFrom: (Vector*)from to: (Vector*) to {
     
-    axis = [[axis div: [axis norm]] mul: sinf(phi / 2)];
+    Quaternion* q0 = [[Quaternion alloc] initWithA: 0 andB: [from div: [from norm]]];
+    Quaternion* q1 = [[Quaternion alloc] initWithA: 0 andB: [to div: [to norm]]];
     
-    Quaternion* q = [[Quaternion alloc] initWithA: cosf(phi / 2) andB: axis];
-    Quaternion* p = [[Quaternion alloc] initWithA: 0 andB: vector];
+    return [q1 mul: [q0 conj]];
+    
+}
+
++ (Vector*) rotate: (Vector*)v withQuaternion: (Quaternion*)q {
+    
+    Quaternion* p = [[Quaternion alloc] initWithA: 0 andB: v];
     
     p = [[q mul: p] mul: [q conj]];
     
     return p.b;
+    
+}
+
++ (Vector*) rotate: (Vector*)v byAngle: (float)phi around: (Vector*)axis {
+    
+    Quaternion* q = [[Quaternion alloc] initWithAngle:phi andAxis:axis];
+    
+    return [Quaternion rotate: v withQuaternion:q];
 
 }
 

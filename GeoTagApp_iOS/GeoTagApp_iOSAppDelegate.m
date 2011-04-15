@@ -1,10 +1,3 @@
-//
-//  GeoTagApp_iOSAppDelegate.m
-//  GeoTagApp_iOS
-//
-//  Created by ebsi on 26.03.11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
 
 #import "GeoTagApp_iOSAppDelegate.h"
 
@@ -16,23 +9,19 @@
 #import "GeoTag.h"
 #import "GeoTagContainer.h"
 
+#import "Vector.h"
+
 @implementation GeoTagApp_iOSAppDelegate
 
 
 @synthesize window = _window;
 
-//@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     
     activeViewController = cameraViewController;
     [activeViewController.view addSubview: menuViewController.view];
-    
-    //[cameraViewController.view insertSubview: mapViewController.view atIndex:3];
-    //[mapViewController.view addSubview:menuViewController.view];
-    //[self.window addSubview: mapViewController.view];
     
     self.window.rootViewController = activeViewController;
     [self.window makeKeyAndVisible];
@@ -43,6 +32,8 @@
     
     mapViewController.geoTagContainer = geoTagContainer;
     mapViewController.delegate = self;
+    
+    cameraViewController.geoTagContainer = geoTagContainer;
     
     menuViewController.touchView.delegate = self;
     
@@ -100,6 +91,9 @@
     [super dealloc];
 }
 
+
+#pragma mark - Location
+
 - (void)startLocationUpdates {
     
     if (locationManager == nil) {
@@ -140,28 +134,54 @@
         [mapViewController removeGeoTagAnnotations];
         [geoTagContainer loadGeoTagsByCoordinate: location.coordinate];
         [mapViewController addGeoTagAnnotations];
+        
+        if (activeViewController == cameraViewController) {
+            
+            [cameraViewController calculateGeoTagDirectionsAtLocation: location 
+                                                          withHeading: heading 
+                                                          andRotation: rotation];
+            
+        }
     }
     
     //[locationManager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-	NSLog(@"error %@", error);
+    
+	NSLog(@"locationError %@", error);
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
-    if (newHeading.headingAccuracy < 0)
+    
+    if (newHeading.headingAccuracy < 0) {
+        
         return;
+    
+    }
     
     heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading);
     
+    if (activeViewController == cameraViewController) {
+        
+        [cameraViewController calculateGeoTagDirectionsAtLocation: location 
+                                                      withHeading: heading 
+                                                      andRotation: rotation];
+        
+    }
 }
 
 - (CLLocationCoordinate2D) getCoordinate {
+    
     if (location) {
+        
         return location.coordinate;
+        
     } else {
+        
         return CLLocationCoordinate2DMake(47.8, 13.08);
+        
     }    
 }
 
@@ -197,23 +217,31 @@
                                                     userInfo:nil 
                                                      repeats:YES];
     
-    
-    //    [motionManager stopGyroUpdates];
-    //    [timer invalidate];
+//    [motionManager stopAccelerometerUpdates];
+//    [timer invalidate];
 }
 
 -(void)doMotionUpdate {
+    
     CMAcceleration a = motionManager.accelerometerData.acceleration;
+    rotation = [[Vector alloc] initWithX: a.x y: a.y z: a.z];
+    
+    if (activeViewController == cameraViewController) {
+        
+        [cameraViewController calculateGeoTagDirectionsAtLocation: location 
+                                                      withHeading: heading 
+                                                      andRotation: rotation];
+        
+    }
     
     NSLog(@"acceleration: %+.2f | %+.2f | %+.2f", a.x, a.y, a.z);
+    
 }
 
 
 // TouchDelegate
 
-- (void)switchViews {
-    
-    //[cameraViewController.view insertSubview: mapViewController.view atIndex:3];
+- (void) switchViews {
     
     [menuViewController.view removeFromSuperview];
     
@@ -232,9 +260,13 @@
     [activeViewController.view addSubview: menuViewController.view];
 }
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+
+- (UIView*) hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    
     if (mapViewController == activeViewController) {
+        
         return [mapViewController.mapView hitTest: point withEvent: event];
+        
     }
     
     return nil;

@@ -52,9 +52,6 @@
     CGRect mapBounds = CGRectMake(0, 0, self.view.bounds.size.height, self.view.bounds.size.width);
 
     mapView = [[MKMapView alloc] initWithFrame: mapBounds];
-    
-    //self.view = mapView;
-    
     [self.view insertSubview:mapView atIndex:0];
     
     mapView.mapType = MKMapTypeStandard;

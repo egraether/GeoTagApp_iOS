@@ -93,6 +93,14 @@
     
 }
 
+- (Vector*) cross: (Vector*)v {
+    
+    return [[Vector alloc] initWithX: y * v.z - z * v.y
+                                   y: z * v.x - x * v.z 
+                                   z: x * v.y - y * v.x];
+    
+}
+
 - (float) angle: (Vector*)v {
     
     if ([self normSquared] && [v normSquared]) {
@@ -120,8 +128,6 @@
 - (Vector*) rotate2D: (float) angle {
     
     Vector* a = [[Vector alloc] init];
-    
-    angle *= M_PI / 180;
     
     a.x = x * cos(angle) - y * sin(angle);
     a.y = x * sin(angle) + y * cos(angle);

@@ -23,6 +23,7 @@
 - (float) norm;
 
 - (float) dot: (Vector*)v;
+- (Vector*) cross: (Vector*)v;
 - (float) angle: (Vector*)v;
 
 - (void) setWorldVectorAtCoordinate: (CLLocationCoordinate2D) coordinate;

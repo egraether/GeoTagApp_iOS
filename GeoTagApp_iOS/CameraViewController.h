@@ -1,16 +1,18 @@
-//
-//  CameraViewController.h
-//  GeoTagApp_iOS
-//
-//  Created by ebsi on 26.03.11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
+@class GeoTagContainer;
+@class Vector;
 
 @interface CameraViewController : UIViewController { //UIImagePickerController {
     
 }
+
+@property (nonatomic, retain) GeoTagContainer* geoTagContainer;
+
+- (void)calculateGeoTagDirectionsAtLocation: (CLLocation*)location 
+                                withHeading: (float)heading
+                                andRotation: (Vector*)rotation;
 
 @end

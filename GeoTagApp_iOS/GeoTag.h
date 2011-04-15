@@ -10,18 +10,20 @@
 #import <MapKit/MapKit.h>
 
 
+@class Vector;
+
 @interface GeoTag : NSObject<MKAnnotation> {
-    NSString* message;
-    NSString* author;
-    
-    CLLocation* location;
+
 }
 
 
 @property (nonatomic, retain) NSString* message;
 @property (nonatomic, retain) NSString* author;
 
-@property (nonatomic, retain) CLLocation *location;
+@property (nonatomic, retain) CLLocation* location;
+
+@property (nonatomic, retain) Vector* direction;
+
 
 - (CLLocationCoordinate2D) coordinate;
 - (NSString*) title;

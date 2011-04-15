@@ -1,19 +1,16 @@
-//
-//  GeoTag.m
-//  GeoTagApp_iOS
-//
-//  Created by ebsi on 26.03.11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
 
 #import "GeoTag.h"
+#import "Vector.h"
 
 
 @implementation GeoTag
 
-@synthesize message;
-@synthesize author;
+
+@synthesize message, author;
 @synthesize location;
+
+@synthesize direction;
+
 
 - (CLLocationCoordinate2D) coordinate {
     return location.coordinate;

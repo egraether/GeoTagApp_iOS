@@ -37,7 +37,7 @@
     
     menuViewController.touchView.delegate = self;
     
-//    [self startLocationUpdates];
+    [self startLocationUpdates];
 //    [self startMotionUpdates];
     
     return YES;
@@ -182,6 +182,16 @@
         
         return CLLocationCoordinate2DMake(47.8, 13.08);
         
+    }    
+}
+
+- (CLLocation*) getCurrentLocation {
+	NSLog(@"getCurrentLocation");
+	
+    if (location) {
+        return location;
+    } else {
+        return [CLLocation initWithCoordinate: CLLocationCoordinate2DMake(47.8, 13.08) altitude: 480.0 horizontalAccuracy: 10.0 verticalAccuracy: 10.0];
     }    
 }
 

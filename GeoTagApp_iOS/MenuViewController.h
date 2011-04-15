@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
+@class PostViewController;
+
 @protocol TouchDelegate
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event;
@@ -40,6 +42,8 @@
     IBOutlet UIButton* cameraViewButton;
     
     TouchView* touchView;
+	
+	IBOutlet PostViewController *postViewController;
 
 }
 
@@ -47,5 +51,9 @@
 
 - (IBAction) toggleViewIcon;
 - (IBAction) toggleMenu;
+- (IBAction) pressPostButton;
+- (IBAction) pressProfileButton;
+- (IBAction) pressArchiveButton;
+- (IBAction) pressFriendsButton;
 
 @end

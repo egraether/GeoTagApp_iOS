@@ -49,7 +49,8 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error;
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading;
 
-- (CLLocationCoordinate2D) getCoordinate;
+- (CLLocationCoordinate2D)getCoordinate;
+- (CLLocation*)getCurrentLocation;
 
 // Motion
 

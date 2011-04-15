@@ -7,15 +7,20 @@
 //
 
 #import "MenuViewController.h"
+#import "PostViewController.h"
 
 @implementation TouchView
 
 @synthesize delegate;
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    return [delegate hitTest: point withEvent: event];
+	if(self.userInteractionEnabled) {
+		return [delegate hitTest: point withEvent: event];
+	}
+	else {
+		return self;
+	}
 }
-
 @end
 
 
@@ -52,7 +57,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    touchView = [[TouchView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    touchView = [[TouchView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.height, self.view.bounds.size.width)];
+	touchView.backgroundColor = [UIColor whiteColor];
+	touchView.alpha = 0.0;
     
     [self.view insertSubview:touchView atIndex:0];
     
@@ -91,7 +98,53 @@
     
     menuClosedButton.hidden = menuOpenButton.hidden;
     menuOpenButton.hidden = !menuOpenButton.hidden;
+	
+	// fade out
+	if(postButton.hidden == NO) {		
+		postButton.alpha = profileButton.alpha = friendsButton.alpha = archiveButton.alpha = 1.0;
+		
+		[UIView beginAnimations:@"fade" context:nil];
+		[UIView setAnimationDuration:0.8];
+		touchView.alpha = 0.0;
+		postButton.alpha = profileButton.alpha = friendsButton.alpha = archiveButton.alpha = 0.0;
+		[UIView commitAnimations];
+		touchView.userInteractionEnabled = YES;
+	}
+	
+	postButton.hidden = !postButton.hidden;
+    profileButton.hidden = !profileButton.hidden;
+    friendsButton.hidden = !friendsButton.hidden;
+    archiveButton.hidden = !archiveButton.hidden;
+	
+	// fade in
+	if(postButton.hidden == NO) {		
+		postButton.alpha = profileButton.alpha = friendsButton.alpha = archiveButton.alpha = 0.0;
+		
+		[UIView beginAnimations:@"fade" context:nil];
+		[UIView setAnimationDuration:0.8];
+		touchView.alpha = 0.8;
+		postButton.alpha = profileButton.alpha = friendsButton.alpha = archiveButton.alpha = 1.0;
+		[UIView commitAnimations];
+		touchView.userInteractionEnabled = NO;
+	}
+}
 
+- (IBAction) pressPostButton {
+	NSLog(@"show post formular");
+	[self.view addSubview: postViewController.view];
+	[self toggleMenu];
+}
+
+- (IBAction) pressProfileButton {
+	NSLog(@"show profile");
+}
+
+- (IBAction) pressArchiveButton {
+	NSLog(@"show archive");
+}
+
+- (IBAction) pressFriendsButton {
+	NSLog(@"show friends");
 }
 
 @end

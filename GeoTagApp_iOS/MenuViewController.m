@@ -27,6 +27,8 @@
 @implementation MenuViewController
 
 @synthesize touchView;
+@synthesize postViewController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

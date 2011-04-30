@@ -7,15 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
+#import "LocationDelegate.h"
 
-@protocol LocationDelegate
-
-- (CLLocationCoordinate2D)getCoordinate;
-
-- (CLLocation*) getCurrentLocation;
-
-@end
 
 @interface PostViewController : UIViewController {
 
@@ -26,7 +19,7 @@
     IBOutlet UIButton* postButton;
 	IBOutlet UITextView* textField;
 
-	id<LocationDelegate> locationDelegate;
+	IBOutlet id<LocationDelegate> locationDelegate;
 
 }
 

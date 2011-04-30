@@ -48,6 +48,7 @@
 }
 
 @property (nonatomic, retain) TouchView* touchView;
+@property (nonatomic, retain) PostViewController *postViewController;
 
 - (IBAction) toggleViewIcon;
 - (IBAction) toggleMenu;

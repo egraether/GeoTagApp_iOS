@@ -5,8 +5,8 @@
 @class GeoTagContainer;
 @class Vector;
 
-@interface CameraViewController : UIViewController { //UIImagePickerController {
-    
+@interface CameraViewController : UIViewController {
+    // UIImagePickerController *imagePickerController;
 }
 
 @property (nonatomic, retain) GeoTagContainer* geoTagContainer;

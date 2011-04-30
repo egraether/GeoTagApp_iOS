@@ -6,6 +6,8 @@
 
 #import "MenuViewController.h"
 
+#import "PostViewController.h"
+
 #import "GeoTag.h"
 #import "GeoTagContainer.h"
 
@@ -36,6 +38,7 @@
     cameraViewController.geoTagContainer = geoTagContainer;
     
     menuViewController.touchView.delegate = self;
+	menuViewController.postViewController.locationDelegate = self;
     
     [self startLocationUpdates];
 //    [self startMotionUpdates];
@@ -195,27 +198,6 @@
     }    
 }
 
-//- (IBAction)goToCameraView {
-//    
-////    cameraViewController.sourceType =  UIImagePickerControllerSourceTypeCamera;
-////	//cameraViewController.delegate = self;
-////    
-////	cameraViewController.allowsEditing = NO;
-////    
-////    cameraViewController.showsCameraControls = NO;
-////    cameraViewController.navigationBarHidden = YES;
-////    
-////    cameraViewController.toolbarHidden = YES;
-////    cameraViewController.wantsFullScreenLayout = YES;
-////    
-////    cameraViewController.cameraViewTransform = CGAffineTransformScale(cameraViewController.cameraViewTransform, 1.0, 1.0);
-////    
-////    [cameraViewController.view addSubview:canvasViewController.view];
-//    
-//	[self presentModalViewController:cameraViewController animated:YES];
-//    [self dismissModalViewControllerAnimated:YES];
-//    
-//}
 
 - (void)startMotionUpdates {
     motionManager = [[CMMotionManager alloc] init];

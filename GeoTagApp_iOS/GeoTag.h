@@ -22,8 +22,10 @@
 
 @property (nonatomic, retain) CLLocation* location;
 
-@property (nonatomic, retain) Vector* direction;
+@property (nonatomic, retain) Vector* worldDirection;
+@property (nonatomic, retain) Vector* phoneDirection;
 
+@property (nonatomic, retain) Vector* screenPosition;
 
 - (CLLocationCoordinate2D) coordinate;
 - (NSString*) title;

@@ -131,14 +131,16 @@
         [location retain];
         
         [mapViewController removeGeoTagAnnotations];
+        
         [geoTagContainer loadGeoTagsByCoordinate: location.coordinate];
+        [geoTagContainer calculateGeoTagWorldDirectionsAtLocation: location];
+        
         [mapViewController addGeoTagAnnotations];
         
         if (activeViewController == cameraViewController) {
             
-            [cameraViewController calculateGeoTagDirectionsAtLocation: location 
-                                                          withHeading: heading 
-                                                      andAcceleration: rotation];
+            [geoTagContainer calculateGeoTagPhoneDirectionsWithHeading: heading 
+                                                       andAcceleration: rotation];
             
         }
         
@@ -169,9 +171,8 @@
     
     if (activeViewController == cameraViewController) {
         
-        [cameraViewController calculateGeoTagDirectionsAtLocation: location 
-                                                      withHeading: heading 
-                                                  andAcceleration: rotation];
+        [geoTagContainer calculateGeoTagPhoneDirectionsWithHeading: heading 
+                                                   andAcceleration: rotation];
         
     }
     
@@ -223,9 +224,8 @@
     
     if (activeViewController == cameraViewController) {
         
-        [cameraViewController calculateGeoTagDirectionsAtLocation: location 
-                                                      withHeading: heading 
-                                                  andAcceleration: rotation];
+        [geoTagContainer calculateGeoTagPhoneDirectionsWithHeading: heading 
+                                                   andAcceleration: rotation];
         
     }
     

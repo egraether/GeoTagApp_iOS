@@ -9,6 +9,9 @@
 #import "GeoTagContainer.h"
 #import "GeoTag.h"
 
+#import "Vector.h"
+#import "Matrix.h"
+
 #import "SimpleKML.h"
 #import "SimpleKMLDocument.h"
 #import "SimpleKMLContainer.h"
@@ -71,6 +74,82 @@
     }
     
     NSLog(@"geotags loaded");
+}
+
+- (void)calculateGeoTagWorldDirectionsAtLocation: (CLLocation*)location {
+    
+    for (GeoTag* geoTag in geoTags) {
+        
+        geoTag.worldDirection = [[Vector alloc] initVectorFromLocation:location toLocation:geoTag.location];
+        
+    }
+    
+    NSLog(@"geotags worldDirections calculated");
+    
+}
+
+- (void) calculateGeoTagPhoneDirectionsWithHeading: (float)heading 
+                                   andAcceleration: (Vector*)acceleration {
+    
+    float phi = heading * M_PI / 180;
+    
+    Vector* right = [[Vector alloc] initWithX: 0 y: sinf(phi) z: -cosf(phi)];
+    
+    Vector* z = [acceleration mul: -1];
+    [z normalize];
+    
+    Vector* y = [z cross: right];
+    [y normalize];
+    
+    Vector* x = [y cross: z];
+    [x normalize];
+    
+    Matrix* matrix = [[Matrix alloc] initTransposedWithVectorsA: x B: y C: z];
+    
+    
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    CGFloat screenScale = [[UIScreen mainScreen] scale];
+    
+    CGSize screenSize = CGSizeMake(screenBounds.size.height * screenScale, 
+                                   screenBounds.size.width * screenScale);
+    
+    float angularFOV = 47.5 * M_PI / 180;
+    float focalLength = screenSize.width / 2 / tanf(angularFOV / 2);
+    
+    Vector* worldDirection = [[Vector alloc] initWithX: 100 y: 0 z: 0];
+    Vector* phoneDirection = [matrix transformVector: worldDirection];
+    
+    [phoneDirection print];
+    
+    Vector* screenPosition = [[Vector alloc] init];
+    
+    screenPosition.y = screenSize.height / 2 - phoneDirection.x / (-phoneDirection.z) * focalLength;
+    screenPosition.x = screenSize.width / 2 - phoneDirection.y / (-phoneDirection.z) * focalLength;
+    screenPosition.z = -phoneDirection.z;
+    
+    [screenPosition print];
+    
+//    for (GeoTag* geoTag in geoTags) {
+//        
+//        geoTag.phoneDirection = [[matrix transformVector: geoTag.worldDirection] rotate2D: M_PI / 2];
+//        geoTag.phoneDirection.x *= -1;
+//        
+//        [geoTag.phoneDirection print];
+//        
+//        geoTag.screenPosition = [[Vector alloc] init];
+//        geoTag.screenPosition.x = geoTag.phoneDirection.x / -geoTag.phoneDirection.z * focalLength - screenSize.width / 2;
+//        geoTag.screenPosition.y = geoTag.phoneDirection.y / -geoTag.phoneDirection.z * focalLength - screenSize.height / 2;
+//        geoTag.screenPosition.z = -geoTag.phoneDirection.z;
+//        
+//        [geoTag.screenPosition print];
+//        
+//        break;
+//        
+//    }
+    
+    //    [self.view setNeedsDisplay];
+    
+    NSLog(@"geotags phoneDirections calculated");
 }
 
 @end

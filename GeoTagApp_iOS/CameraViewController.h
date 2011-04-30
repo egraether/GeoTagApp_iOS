@@ -11,8 +11,4 @@
 
 @property (nonatomic, retain) GeoTagContainer* geoTagContainer;
 
-- (void)calculateGeoTagDirectionsAtLocation: (CLLocation*)location 
-                                withHeading: (float)heading
-                                andAcceleration: (Vector*)acelleration;
-
 @end

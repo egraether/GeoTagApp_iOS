@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+@class Vector;
 
 @interface GeoTagContainer : NSObject {
     
@@ -19,5 +20,7 @@
 @property (nonatomic, retain) NSMutableArray* geoTags;
 
 - (void) loadGeoTagsByCoordinate: (CLLocationCoordinate2D) coordinate;
+- (void) calculateGeoTagWorldDirectionsAtLocation: (CLLocation*)location;
+- (void) calculateGeoTagPhoneDirectionsWithHeading: (float)heading andAcceleration: (Vector*)acceleration;
 
 @end

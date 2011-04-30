@@ -79,9 +79,9 @@
                                 withHeading: (float)heading
                             andAcceleration: (Vector*)acceleration {
     
-    float phi = 270* - heading;
+    float phi = heading * M_PI / 180;
     
-    Vector* right = [[Vector alloc] initWithX: cosf(phi) y: sinf(phi) z: 0];
+    Vector* right = [[Vector alloc] initWithX: 0 y: sinf(phi) z: -cosf(phi)];
     
     Vector* z = [acceleration mul: -1];
     [z normalize];
@@ -94,27 +94,27 @@
     
     Matrix* matrix = [[Matrix alloc] initTransposedWithVectorsA: x B: y C: z];
     
-    CLLocation* geoTagLocation = [[CLLocation alloc] initWithLatitude:location.coordinate.latitude 
-                                                            longitude:location.coordinate.longitude + 0.001];
+//    CLLocation* geoTagLocation = [[CLLocation alloc] initWithLatitude:location.coordinate.latitude 
+//                                                            longitude:location.coordinate.longitude + 0.001];
+//    
+//    Vector* worldDirection = [[Vector alloc] initVectorFromLocation:location toLocation:geoTagLocation];
+//    
+//    //[worldDirection print];
+//        
+//    Vector* direction = [matrix transformVector:worldDirection];
+//        
+//    [direction print];
     
-    Vector* worldDirection = [[Vector alloc] initVectorFromLocation:location toLocation:geoTagLocation];
     
-    [worldDirection print];
+    for (GeoTag* geoTag in geoTagContainer.geoTags) {
         
-    Vector* direction = [matrix transformVector:worldDirection];
+        Vector* worldDirection = [[Vector alloc] initVectorFromLocation:location toLocation:geoTag.location];
         
-    [direction print];
-    
-    
-//    for (GeoTag* geoTag in geoTagContainer.geoTags) {
-//        
-//        Vector* worldDirection = [[Vector alloc] initVectorFromLocation:location toLocation:geoTag.location];
-//        
-//        geoTag.direction = [matrix transformVector:worldDirection];
-//        
-//        [geoTag.direction print];
-//        
-//    }
+        geoTag.direction = [matrix transformVector:worldDirection];
+        
+        [geoTag.direction print];
+        
+    }
     
 //    [self.view setNeedsDisplay];
     

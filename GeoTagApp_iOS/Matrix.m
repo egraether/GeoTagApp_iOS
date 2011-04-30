@@ -52,7 +52,9 @@
 
 - (Vector*) transformVector: (Vector*)vector {
 
-    return [[Vector alloc] initWithX: [a dot: vector] y: [b dot: vector] z: [c dot: vector]]; 
+    return [[Vector alloc] initWithX: [a dot: vector] 
+                                   y: [b dot: vector] 
+                                   z: [c dot: vector]]; 
 
 }
 

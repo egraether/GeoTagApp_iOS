@@ -63,7 +63,7 @@
 
 
 - (IBAction) pressBackButton {
-
+	
 	[self.view removeFromSuperview];
 	
 }
@@ -71,30 +71,34 @@
 - (IBAction) pressPostButton {
 	
 	// TODO: post message to server
-	
-//	CLLocationCoordinate2D coord = [locationDelegate getCoordinate];
-	
-//	CLLocation *currentLocation = [locationDelegate getCurrentLocation];
-//	NSLog(@"latitude %+.6f, longitude %+.6f, altitude %+.6f\n",
-//		  currentLocation.coordinate.latitude,
-//		  currentLocation.coordinate.longitude,
-//		  currentLocation.altitude);
-//	NSLog(@"latitude %+.6f, longitude %+.6f\n",
-//		  coord.latitude,
-//		  coord.longitude);
-	NSLog(@"postmessage: %@\n", textField.text);
 		
-//	NSURL *url = [NSURL URLWithString:@"http://sbickt.heroku.com/geotags"];
-//	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-//	[request setPostValue:textField.text forKey:@"sbickerl[content]"];
-//	[request setPostValue:@"public" forKey:@"sbickerl[visibility]"];
-//	[request setPostValue:@"47.79760" forKey:@"geotag[lat]"];
-//	[request setPostValue:@"13.06768" forKey:@"geotag[lng]"];
-//	[request setPostValue:@"471.0" forKey:@"geotag[alt]"];
-//	[request setRequestMethod:@"POST"];
-//	
-//	[request setDelegate:self];
-//	[request startAsynchronous];
+	CLLocation *currentLocation = [locationDelegate getCurrentLocation];
+	NSLog(@"latitude %+.6f, longitude %+.6f, altitude %+.6f\n",
+		  currentLocation.coordinate.latitude,
+		  currentLocation.coordinate.longitude,
+		  currentLocation.altitude);
+
+	NSLog(@"postmessage: %@\n", textField.text);
+	
+	NSURL *url = [NSURL URLWithString:@"http://sbickt.heroku.com/geotags"];
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+	[request setPostValue:textField.text forKey:@"sbickerl[content]"];
+	[request setPostValue:@"public" forKey:@"sbickerl[visibility]"];
+	[request setPostValue:[NSString stringWithFormat:@"%f", currentLocation.coordinate.latitude] 
+				   forKey:@"geotag[lat]"];
+	[request setPostValue:[NSString stringWithFormat:@"%f", currentLocation.coordinate.longitude] 
+				   forKey:@"geotag[lng]"];
+	[request setPostValue:[NSString stringWithFormat:@"%f", currentLocation.altitude] 
+				   forKey:@"geotag[alt]"];
+	[request setRequestMethod:@"POST"];
+	
+	[request startSynchronous];
+	NSError *error = [request error];
+	if (!error) {
+		NSLog(@"success!\n");
+		NSString *response = [request responseString];
+		NSLog(@"%@", response);
+	}
 	
 	
 	[self.view removeFromSuperview];

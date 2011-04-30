@@ -19,7 +19,24 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+//		imagePickerController.sourceType =  UIImagePickerControllerSourceTypeCamera;
+//		// imagePickerController.delegate = self;
+//		
+//		imagePickerController.allowsEditing = NO;
+//		
+//		imagePickerController.showsCameraControls = NO;
+//		imagePickerController.navigationBarHidden = YES;
+//		
+//		imagePickerController.toolbarHidden = YES;
+//		imagePickerController.wantsFullScreenLayout = YES;
+//		
+//		imagePickerController.cameraViewTransform = CGAffineTransformScale(imagePickerController.cameraViewTransform, 1.0, 1.0);
+//		
+//		
+//		[self presentModalViewController:imagePickerController animated:NO];
+//		// [self dismissModalViewControllerAnimated:YES];
+		
+	
     }
     return self;
 }
@@ -42,7 +59,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	
 }
 
 - (void)viewDidUnload

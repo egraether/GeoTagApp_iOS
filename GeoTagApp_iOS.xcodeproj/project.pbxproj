@@ -172,6 +172,7 @@
 		3D67F6811356571B006157E3 /* cat_public.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat_public.png; path = data/images/cat_public.png; sourceTree = "<group>"; };
 		3D67F68613565864006157E3 /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_button.png; path = data/images/back_button.png; sourceTree = "<group>"; };
 		3D67F68713565864006157E3 /* post_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = post_button.png; path = data/images/post_button.png; sourceTree = "<group>"; };
+		3DBF88811358678D00ADBBFA /* LocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDelegate.h; sourceTree = "<group>"; };
 		685687F9135876B50021715F /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		685687FA135876B60021715F /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoTagApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +454,7 @@
 			children = (
 				6898F7FE1350EB0A009BB5D5 /* Vector.h */,
 				6898F7FF1350EB0A009BB5D5 /* Vector.m */,
+				3DBF88811358678D00ADBBFA /* LocationDelegate.h */,
 				6867B4E9133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.h */,
 				6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */,
 				6867B4EC133E2A3B000EA2C8 /* MainWindow.xib */,

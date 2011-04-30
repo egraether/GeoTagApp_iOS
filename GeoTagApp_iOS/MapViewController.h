@@ -8,14 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "LocationDelegate.h"
 
 @class GeoTagContainer;
-
-@protocol LocationDelegate
-
-- (CLLocationCoordinate2D) getCoordinate;
-
-@end
 
 
 @interface MapViewController : UIViewController<MKMapViewDelegate> {

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
+#import "LocationDelegate.h"
 
 #import "MapViewController.h"
 #import "CameraViewController.h"

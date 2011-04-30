@@ -27,6 +27,37 @@
     
 }
 
+- (Vector*) initWorldVectorAtCoordinate: (CLLocation*)location; {
+    
+    self = [super init];
+    
+    float longitude = location.coordinate.longitude * M_PI / 180;
+    float latitude = location.coordinate.latitude * M_PI / 180;
+    
+    x = cos(longitude) * cos(latitude);
+    y = sin(longitude) * cos(latitude);
+    z = sin(latitude);
+    
+    [self mul: 6371000.785 + location.altitude];
+    
+    return self;
+    
+}
+
+- (Vector*) initVectorFromLocation: (CLLocation*)from toLocation: (CLLocation*)to {
+    
+    self = [super init];
+    
+    float radius = 6371000.785;
+    
+    y = (to.coordinate.longitude - from.coordinate.longitude) * radius * M_PI / 180;
+    x = (to.coordinate.latitude - from.coordinate.latitude) * radius * M_PI / 180;
+    z = to.altitude - from.altitude;
+    
+    return self;
+    
+}
+
 - (Vector*) add: (Vector*)v {
 
     Vector* a = [[Vector alloc] init];
@@ -87,6 +118,12 @@
     
 }
 
+- (void) normalize {
+
+    [self div: [self norm]];
+    
+}
+
 - (float) dot: (Vector*)v {
     
     return x * v.x + y * v.y + z * v.z;
@@ -114,14 +151,9 @@
     }
 }
 
-- (void) setWorldVectorAtCoordinate: (CLLocationCoordinate2D) coordinate {
-    
-    float longitude = coordinate.longitude * M_PI / 180;
-    float latitude = coordinate.latitude * M_PI / 180;
-    
-    x = cos(longitude) * cos(latitude) * 6371000.785;
-    y = sin(longitude) * cos(latitude) * 6371000.785;
-    z = sin(latitude) * 6371000.785;
+- (float) projectionLengthOn:(Vector *)v {
+
+    return [self dot:v] / [self norm];
     
 }
 

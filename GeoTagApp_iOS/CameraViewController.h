@@ -13,6 +13,6 @@
 
 - (void)calculateGeoTagDirectionsAtLocation: (CLLocation*)location 
                                 withHeading: (float)heading
-                                andRotation: (Vector*)rotation;
+                                andAcceleration: (Vector*)acelleration;
 
 @end

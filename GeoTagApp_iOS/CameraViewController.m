@@ -6,6 +6,7 @@
 
 #import "Vector.h"
 #import "Quaternion.h"
+#import "Matrix.h"
 
 
 @implementation CameraViewController
@@ -42,22 +43,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    Vector* gravity = [[Vector alloc] initWithX: 0 y: 0 z: 1];
-    Vector* rotation = [[Vector alloc] initWithX: 1 y: 0 z: 0];
-    
-    Quaternion* q = [[Quaternion alloc] initWithAngle: [gravity angle: rotation] 
-                                              andAxis: [gravity cross: rotation]];
-    
-    [q print];
-    
-    
-    Vector* v = [[Vector alloc] initWithX: -1 y: 0 z: 0];
-    
-    v = [Quaternion rotate: v withQuaternion: q];
-    
-    [v print];
-    
 }
 
 - (void)viewDidUnload
@@ -73,34 +58,31 @@
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
 }
 
-
-
 - (void)calculateGeoTagDirectionsAtLocation: (CLLocation*)location 
                                 withHeading: (float)heading
-                                andRotation: (Vector*)rotation {
+                                andAcceleration: (Vector*)acceleration {
     
+    float phi = 270* - heading;
     
-    Vector* gravity = [[Vector alloc] initWithX: 0 y: 0 z: -1];
+    Vector* right = [[Vector alloc] initWithX: cosf(phi) y: sinf(phi) z: 0];
     
-    Quaternion* q = [[Quaternion alloc] initWithAngle: [gravity angle: rotation] 
-                                              andAxis: [gravity cross: rotation]];
+    Vector* z = [acceleration mul: -1];
+    [z normalize];
     
-    Vector* position = [[Vector alloc] init];
-    [position setWorldVectorAtCoordinate: location.coordinate];
+    Vector* y = [z cross: right];
+    [y normalize];
+    
+    Vector* x = [y cross: z];
+    [x normalize];
+    
+    Matrix* matrix = [[Matrix alloc] initTransposedWithVectorsA: x B: y C: z];
     
     
     for (GeoTag* geoTag in geoTagContainer.geoTags) {
         
-        Vector* v = [[Vector alloc] init];
-        [v setWorldVectorAtCoordinate: geoTag.coordinate];
+        Vector* worldDirection = [[Vector alloc] initVectorFromLocation:location toLocation:geoTag.location];
         
-        v = [v sub: position];
-//        v = [v rotate2D: (heading + 90) * M_PI / 180];
-        
-        
-        geoTag.direction = [Quaternion rotate: v withQuaternion: q];
-        
-        
+        geoTag.direction = [matrix transformVector:worldDirection];
         
     }
     

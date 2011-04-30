@@ -29,6 +29,7 @@
 		3D67F6851356571B006157E3 /* cat_public.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D67F6811356571B006157E3 /* cat_public.png */; };
 		3D67F68813565864006157E3 /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D67F68613565864006157E3 /* back_button.png */; };
 		3D67F68913565864006157E3 /* post_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D67F68713565864006157E3 /* post_button.png */; };
+		685687FB135876B80021715F /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 685687FA135876B60021715F /* Matrix.m */; };
 		6867B4DB133E2A3B000EA2C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DA133E2A3B000EA2C8 /* UIKit.framework */; };
 		6867B4DD133E2A3B000EA2C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DC133E2A3B000EA2C8 /* Foundation.framework */; };
 		6867B4DF133E2A3B000EA2C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B4DE133E2A3B000EA2C8 /* CoreGraphics.framework */; };
@@ -171,6 +172,8 @@
 		3D67F6811356571B006157E3 /* cat_public.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat_public.png; path = data/images/cat_public.png; sourceTree = "<group>"; };
 		3D67F68613565864006157E3 /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_button.png; path = data/images/back_button.png; sourceTree = "<group>"; };
 		3D67F68713565864006157E3 /* post_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = post_button.png; path = data/images/post_button.png; sourceTree = "<group>"; };
+		685687F9135876B50021715F /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		685687FA135876B60021715F /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoTagApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6867B4DA133E2A3B000EA2C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6867B4DC133E2A3B000EA2C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -472,6 +475,8 @@
 				3D67F66D13565166006157E3 /* PostViewController.h */,
 				3D67F66E13565166006157E3 /* PostViewController.m */,
 				3D67F66F13565166006157E3 /* PostViewController.xib */,
+				685687F9135876B50021715F /* Matrix.h */,
+				685687FA135876B60021715F /* Matrix.m */,
 			);
 			path = GeoTagApp_iOS;
 			sourceTree = "<group>";
@@ -913,6 +918,7 @@
 				3D3DA3C11357A85B00D891FF /* ASIInputStream.m in Sources */,
 				3D3DA3C21357A85B00D891FF /* ASINetworkQueue.m in Sources */,
 				3D3DA3CB1357A8DD00D891FF /* Reachability.m in Sources */,
+				685687FB135876B80021715F /* Matrix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,6 +972,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -975,6 +982,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
 				SDKROOT = iphoneos;
 			};
@@ -984,6 +992,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -992,6 +1001,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
 				SDKROOT = iphoneos;
 			};
@@ -1001,7 +1011,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thomas Buchöster (HMMJ274F4T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1011,7 +1022,8 @@
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1020,7 +1032,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thomas Buchöster (HMMJ274F4T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoTagApp_iOS/GeoTagApp_iOS-Prefix.pch";
@@ -1029,7 +1042,8 @@
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

@@ -38,7 +38,7 @@
     menuViewController.touchView.delegate = self;
     
     [self startLocationUpdates];
-//    [self startMotionUpdates];
+    [self startMotionUpdates];
     
     return YES;
 }
@@ -123,10 +123,6 @@
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     
     if (abs(howRecent) < 15.0) {
-        NSLog(@"latitude %+.6f, longitude %+.6f, altitude %+.6f\n",
-              currentLocation.coordinate.latitude,
-              currentLocation.coordinate.longitude,
-              currentLocation.altitude);
         
         location = currentLocation;
         [location retain];
@@ -139,9 +135,14 @@
             
             [cameraViewController calculateGeoTagDirectionsAtLocation: location 
                                                           withHeading: heading 
-                                                          andRotation: rotation];
+                                                      andAcceleration: rotation];
             
         }
+        
+        NSLog(@"latitude %+.6f, longitude %+.6f, altitude %+.6f\n",
+              currentLocation.coordinate.latitude,
+              currentLocation.coordinate.longitude,
+              currentLocation.altitude);
     }
     
     //[locationManager stopUpdatingLocation];
@@ -167,9 +168,11 @@
         
         [cameraViewController calculateGeoTagDirectionsAtLocation: location 
                                                       withHeading: heading 
-                                                      andRotation: rotation];
+                                                  andAcceleration: rotation];
         
     }
+    
+    NSLog(@"heading: %+.2f", heading);
 }
 
 - (CLLocationCoordinate2D) getCoordinate {
@@ -191,7 +194,7 @@
     if (location) {
         return location;
     } else {
-        return [CLLocation initWithCoordinate: CLLocationCoordinate2DMake(47.8, 13.08) altitude: 480.0 horizontalAccuracy: 10.0 verticalAccuracy: 10.0];
+        return [[CLLocation alloc] initWithCoordinate: CLLocationCoordinate2DMake(47.8, 13.08) altitude: 480.0 horizontalAccuracy: 10.0 verticalAccuracy: 10.0];
     }    
 }
 
@@ -240,7 +243,7 @@
         
         [cameraViewController calculateGeoTagDirectionsAtLocation: location 
                                                       withHeading: heading 
-                                                      andRotation: rotation];
+                                                  andAcceleration: rotation];
         
     }
     

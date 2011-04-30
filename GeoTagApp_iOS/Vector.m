@@ -50,8 +50,8 @@
     
     float radius = 6371000.785;
     
-    y = (to.coordinate.longitude - from.coordinate.longitude) * radius * M_PI / 180;
-    x = (to.coordinate.latitude - from.coordinate.latitude) * radius * M_PI / 180;
+    x = (to.coordinate.longitude - from.coordinate.longitude) * radius * M_PI / 180;
+    y = (to.coordinate.latitude - from.coordinate.latitude) * radius * M_PI / 180;
     z = to.altitude - from.altitude;
     
     return self;

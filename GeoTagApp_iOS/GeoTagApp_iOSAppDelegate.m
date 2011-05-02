@@ -22,11 +22,29 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    activeViewController = cameraViewController;
-    [activeViewController.view addSubview: menuViewController.view];
+    cameraViewController = [[UIImagePickerController alloc] init];
     
-    self.window.rootViewController = activeViewController;
+    cameraViewController.sourceType =  UIImagePickerControllerSourceTypeCamera;
+    
+    cameraViewController.allowsEditing = NO;
+    
+    cameraViewController.showsCameraControls = NO;
+    cameraViewController.navigationBarHidden = YES;
+    
+    cameraViewController.toolbarHidden = YES;
+    cameraViewController.wantsFullScreenLayout = YES;
+    
+    cameraViewController.cameraOverlayView.transform = CGAffineTransformMakeRotation(M_PI_2);
+    [cameraViewController.cameraOverlayView addSubview: menuViewController.view];
+    
+    cameraViewController.cameraViewTransform = CGAffineTransformMakeScale(1.254, 1.254);
+
+    self.window.rootViewController = [[UIViewController alloc] init];
     [self.window makeKeyAndVisible];
+    
+    activeViewController = cameraViewController;
+    [self.window.rootViewController presentModalViewController:cameraViewController animated:NO];
+    
     
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:NO];
     
@@ -35,8 +53,6 @@
     mapViewController.geoTagContainer = geoTagContainer;
     mapViewController.delegate = self;
     
-    cameraViewController.geoTagContainer = geoTagContainer;
-    
     menuViewController.touchView.delegate = self;
 	menuViewController.postViewController.locationDelegate = self;
     
@@ -44,6 +60,7 @@
     [self startMotionUpdates];
     
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -242,17 +259,19 @@
     
     if (activeViewController == mapViewController) {
         
-        [cameraViewController dismissModalViewControllerAnimated:YES];
+        [cameraViewController.cameraOverlayView addSubview: menuViewController.view];
         activeViewController = cameraViewController;
         
     } else {
         
-        [cameraViewController presentModalViewController: mapViewController animated:YES];
+        [mapViewController.view addSubview: menuViewController.view];
         activeViewController = mapViewController;
         
     }
     
-    [activeViewController.view addSubview: menuViewController.view];
+    [self.window.rootViewController dismissModalViewControllerAnimated:NO];
+    [self.window.rootViewController presentModalViewController: activeViewController animated:NO];
+    
 }
 
 

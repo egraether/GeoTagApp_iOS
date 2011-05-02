@@ -9,21 +9,24 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
+
 #import "LocationDelegate.h"
 
 #import "MapViewController.h"
-#import "CameraViewController.h"
+//#import "CameraViewController.h"
 #import "MenuViewController.h"
 
+
 @class GeoTagContainer;
+@class Vector;
 
 
 @interface GeoTagApp_iOSAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, LocationDelegate, TouchDelegate> {
     
-    IBOutlet CameraViewController* cameraViewController;
     IBOutlet MapViewController* mapViewController;
     IBOutlet MenuViewController* menuViewController;
     
+    UIImagePickerController* cameraViewController;
     UIViewController* activeViewController;
     
     CMMotionManager* motionManager;

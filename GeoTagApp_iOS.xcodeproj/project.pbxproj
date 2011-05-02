@@ -43,8 +43,6 @@
 		6867B505133E2A3B000EA2C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6867B503133E2A3B000EA2C8 /* InfoPlist.strings */; };
 		6867B508133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6867B507133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h */; };
 		6867B50A133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B509133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m */; };
-		6867B516133E2DDB000EA2C8 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B514133E2DDB000EA2C8 /* CameraViewController.m */; };
-		6867B517133E2DDB000EA2C8 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6867B515133E2DDB000EA2C8 /* CameraViewController.xib */; };
 		6867B51B133E2E3C000EA2C8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6867B519133E2E3A000EA2C8 /* MapViewController.m */; };
 		6867B51C133E2E3C000EA2C8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6867B51A133E2E3B000EA2C8 /* MapViewController.xib */; };
 		6867B51E133E37F8000EA2C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6867B51D133E37F8000EA2C8 /* MapKit.framework */; };
@@ -192,9 +190,6 @@
 		6867B506133E2A3B000EA2C8 /* GeoTagApp_iOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoTagApp_iOSTests-Prefix.pch"; sourceTree = "<group>"; };
 		6867B507133E2A3B000EA2C8 /* GeoTagApp_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoTagApp_iOSTests.h; sourceTree = "<group>"; };
 		6867B509133E2A3B000EA2C8 /* GeoTagApp_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoTagApp_iOSTests.m; sourceTree = "<group>"; };
-		6867B513133E2DDA000EA2C8 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
-		6867B514133E2DDB000EA2C8 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
-		6867B515133E2DDB000EA2C8 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		6867B518133E2E3A000EA2C8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		6867B519133E2E3A000EA2C8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		6867B51A133E2E3B000EA2C8 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
@@ -459,9 +454,6 @@
 				6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */,
 				6867B4EC133E2A3B000EA2C8 /* MainWindow.xib */,
 				6867B4E1133E2A3B000EA2C8 /* Supporting Files */,
-				6867B513133E2DDA000EA2C8 /* CameraViewController.h */,
-				6867B514133E2DDB000EA2C8 /* CameraViewController.m */,
-				6867B515133E2DDB000EA2C8 /* CameraViewController.xib */,
 				6867B518133E2E3A000EA2C8 /* MapViewController.h */,
 				6867B519133E2E3A000EA2C8 /* MapViewController.m */,
 				6867B51A133E2E3B000EA2C8 /* MapViewController.xib */,
@@ -788,7 +780,6 @@
 			files = (
 				6867B4E5133E2A3B000EA2C8 /* InfoPlist.strings in Resources */,
 				6867B4EE133E2A3B000EA2C8 /* MainWindow.xib in Resources */,
-				6867B517133E2DDB000EA2C8 /* CameraViewController.xib in Resources */,
 				6867B51C133E2E3C000EA2C8 /* MapViewController.xib in Resources */,
 				6867B5C2133E4799000EA2C8 /* LICENSE.md in Resources */,
 				6867B5C3133E4799000EA2C8 /* LICENSE.txt in Resources */,
@@ -850,7 +841,6 @@
 			files = (
 				6867B4E8133E2A3B000EA2C8 /* main.m in Sources */,
 				6867B4EB133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m in Sources */,
-				6867B516133E2DDB000EA2C8 /* CameraViewController.m in Sources */,
 				6867B51B133E2E3C000EA2C8 /* MapViewController.m in Sources */,
 				6867B5C4133E4799000EA2C8 /* ioapi.c in Sources */,
 				6867B5C5133E4799000EA2C8 /* mztools.c in Sources */,

@@ -116,18 +116,18 @@
     float angularFOV = 47.5 * M_PI / 180;
     float focalLength = screenSize.width / 2 / tanf(angularFOV / 2);
     
-    Vector* worldDirection = [[Vector alloc] initWithX: 100 y: 0 z: 0];
-    Vector* phoneDirection = [matrix transformVector: worldDirection];
-    
-    [phoneDirection print];
-    
-    Vector* screenPosition = [[Vector alloc] init];
-    
-    screenPosition.y = screenSize.height / 2 - phoneDirection.x / (-phoneDirection.z) * focalLength;
-    screenPosition.x = screenSize.width / 2 - phoneDirection.y / (-phoneDirection.z) * focalLength;
-    screenPosition.z = -phoneDirection.z;
-    
-    [screenPosition print];
+//    Vector* worldDirection = [[Vector alloc] initWithX: 100 y: 0 z: 0];
+//    Vector* phoneDirection = [matrix transformVector: worldDirection];
+//    
+//    [phoneDirection print];
+//    
+//    Vector* screenPosition = [[Vector alloc] init];
+//    
+//    screenPosition.y = screenSize.height / 2 - phoneDirection.x / (-phoneDirection.z) * focalLength;
+//    screenPosition.x = screenSize.width / 2 - phoneDirection.y / (-phoneDirection.z) * focalLength;
+//    screenPosition.z = -phoneDirection.z;
+//    
+//    [screenPosition print];
     
 //    for (GeoTag* geoTag in geoTags) {
 //        

@@ -1,11 +1,8 @@
 
 #import "GeoTagApp_iOSAppDelegate.h"
 
-#import "CameraViewController.h"
 #import "MapViewController.h"
-
 #import "MenuViewController.h"
-
 #import "PostViewController.h"
 
 #import "GeoTag.h"

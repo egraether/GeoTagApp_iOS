@@ -11,14 +11,13 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "LocationDelegate.h"
-
-#import "MapViewController.h"
-//#import "CameraViewController.h"
 #import "MenuViewController.h"
 
 
 @class GeoTagContainer;
 @class Vector;
+
+@class MapViewController;
 
 
 @interface GeoTagApp_iOSAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, LocationDelegate, TouchDelegate> {

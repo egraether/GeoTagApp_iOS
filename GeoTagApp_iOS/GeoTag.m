@@ -9,7 +9,8 @@
 @synthesize message, author;
 @synthesize location;
 
-@synthesize direction;
+@synthesize worldDirection, phoneDirection;
+@synthesize screenPosition;
 
 
 - (CLLocationCoordinate2D) coordinate {

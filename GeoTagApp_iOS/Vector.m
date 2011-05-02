@@ -163,6 +163,7 @@
     
     a.x = x * cos(angle) - y * sin(angle);
     a.y = x * sin(angle) + y * cos(angle);
+    a.z = z;
     
     return a;
     

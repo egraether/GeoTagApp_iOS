@@ -13,7 +13,6 @@
 @interface PostViewController : UIViewController {
 
 	IBOutlet UIButton* categoryPrivateButton;
-    IBOutlet UIButton* categoryFriendsButton;
     IBOutlet UIButton* categoryPublicButton;
     IBOutlet UIButton* backButton;
     IBOutlet UIButton* postButton;

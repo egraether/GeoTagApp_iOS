@@ -13,7 +13,6 @@
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="1"/>
-			<integer value="40"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -81,7 +80,7 @@
 					<object class="IBUIButton" id="894834264">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{412, 109}, {57, 53}}</string>
+						<string key="NSFrame">{{416, 116}, {57, 53}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="853086589"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -106,7 +105,7 @@
 					<object class="IBUIButton" id="748555801">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{343, 131}, {57, 53}}</string>
+						<string key="NSFrame">{{307, 248}, {57, 53}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="894834264"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -131,7 +130,7 @@
 					<object class="IBUIButton" id="853086589">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{282, 256}, {57, 53}}</string>
+						<string key="NSFrame">{{329, 159}, {57, 53}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="564800449"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -151,31 +150,6 @@
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">menu_archive.png</string>
-						</object>
-					</object>
-					<object class="IBUIButton" id="378026444">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{297, 191}, {57, 53}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="748555801"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
-							<integer value="5" key="IBUIAccessibilityTraits"/>
-						</object>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="295934943"/>
-						<reference key="IBUIHighlightedTitleColor" ref="971591458"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="431905450"/>
-						<object class="NSCustomResource" key="IBUINormalImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">menu_friends.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="564800449">
@@ -232,7 +206,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{10, 8}, {57, 57}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="378026444"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
 							<integer value="5" key="IBUIAccessibilityTraits"/>
@@ -253,7 +227,7 @@
 						</object>
 					</object>
 				</object>
-				<string key="NSFrameSize">{480, 300}</string>
+				<string key="NSFrameSize">{499, 321}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="1002578623"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
@@ -271,6 +245,15 @@
 			</object>
 			<object class="IBUIViewController" id="994276215">
 				<string key="IBUINibName">PostViewController</string>
+				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
+					<int key="interfaceOrientation">3</int>
+				</object>
+				<bool key="IBUIWantsFullScreenLayout">YES</bool>
+				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+				<bool key="IBUIHorizontal">YES</bool>
+			</object>
+			<object class="IBUIViewController" id="536372356">
+				<string key="IBUINibName">AuthorizationViewController</string>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="interfaceOrientation">3</int>
 				</object>
@@ -305,14 +288,6 @@
 						<reference key="destination" ref="1002578623"/>
 					</object>
 					<int key="connectionID">21</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">friendsButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="378026444"/>
-					</object>
-					<int key="connectionID">22</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -410,15 +385,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">pressFriendsButton</string>
-						<reference key="source" ref="378026444"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">38</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">pressArchiveButton</string>
 						<reference key="source" ref="853086589"/>
 						<reference key="destination" ref="372490531"/>
@@ -454,9 +420,8 @@
 							<reference ref="564800449"/>
 							<reference ref="672910894"/>
 							<reference ref="894834264"/>
-							<reference ref="748555801"/>
 							<reference ref="853086589"/>
-							<reference ref="378026444"/>
+							<reference ref="748555801"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -508,12 +473,6 @@
 						<string key="objectName">ArchiveButton</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">19</int>
-						<reference key="object" ref="378026444"/>
-						<reference key="parent" ref="191373211"/>
-						<string key="objectName">FriendsButton</string>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
 						<reference key="object" ref="1002578623"/>
 						<reference key="parent" ref="191373211"/>
@@ -524,6 +483,12 @@
 						<reference key="object" ref="994276215"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">postViewController</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">43</int>
+						<reference key="object" ref="536372356"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">authorizationViewController</string>
 					</object>
 				</object>
 			</object>
@@ -548,19 +513,22 @@
 					<string>16.IBViewBoundsToFrameTransform</string>
 					<string>17.IBPluginDependency</string>
 					<string>17.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
+					<string>17.IBViewBoundsToFrameTransform</string>
 					<string>18.IBPluginDependency</string>
 					<string>18.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
-					<string>19.IBPluginDependency</string>
-					<string>19.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
+					<string>18.IBViewBoundsToFrameTransform</string>
 					<string>40.CustomClassName</string>
 					<string>40.IBEditorWindowLastContentRect</string>
 					<string>40.IBPluginDependency</string>
+					<string>43.CustomClassName</string>
+					<string>43.IBEditorWindowLastContentRect</string>
+					<string>43.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>MenuViewController</string>
 					<string>UIResponder</string>
-					<string>{{434, 412}, {480, 300}}</string>
+					<string>{{416, 391}, {499, 321}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="0.0"/>
@@ -577,12 +545,19 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="0.0"/>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDGAAAw1QAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="0.0"/>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<real value="0.0"/>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDjQAAw5mAAA</bytes>
+					</object>
 					<string>PostViewController</string>
 					<string>{{397, 316}, {480, 320}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>AuthorizationViewController</string>
+					<string>{{370, 334}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -602,11 +577,51 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">42</int>
+			<int key="maxID">43</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">AuthorizationViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>pressBackButton</string>
+							<string>pressLoginButton</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>pressBackButton</string>
+							<string>pressLoginButton</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">pressBackButton</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">pressLoginButton</string>
+								<string key="candidateClassName">id</string>
+							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">GeoTagApp_iOS/AuthorizationViewController.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">MenuViewController</string>
 					<string key="superclassName">UIViewController</string>
@@ -675,6 +690,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>archiveButton</string>
+							<string>authorizationViewController</string>
 							<string>cameraViewButton</string>
 							<string>friendsButton</string>
 							<string>mapViewButton</string>
@@ -687,6 +703,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIButton</string>
+							<string>AuthorizationViewController</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
@@ -702,6 +719,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>archiveButton</string>
+							<string>authorizationViewController</string>
 							<string>cameraViewButton</string>
 							<string>friendsButton</string>
 							<string>mapViewButton</string>
@@ -716,6 +734,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">archiveButton</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">authorizationViewController</string>
+								<string key="candidateClassName">AuthorizationViewController</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">cameraViewButton</string>
@@ -1091,7 +1113,6 @@
 				<string>mapview_icon.png</string>
 				<string>menu_archive.png</string>
 				<string>menu_closed.png</string>
-				<string>menu_friends.png</string>
 				<string>menu_open.png</string>
 				<string>menu_post.png</string>
 				<string>menu_profile.png</string>
@@ -1102,7 +1123,6 @@
 				<string>{57, 57}</string>
 				<string>{57, 53}</string>
 				<string>{57, 93}</string>
-				<string>{57, 53}</string>
 				<string>{57, 93}</string>
 				<string>{57, 53}</string>
 				<string>{57, 53}</string>

@@ -41,7 +41,7 @@
 	menuViewController.postViewController.locationDelegate = self;
     
     [self startLocationUpdates];
-    [self startMotionUpdates];
+    // [self startMotionUpdates];
     
     return YES;
 }

@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "PostViewController.h"
+#import "AuthorizationViewController.h"
 
 @implementation TouchView
 
@@ -28,13 +29,14 @@
 
 @synthesize touchView;
 @synthesize postViewController;
-
+@synthesize authorizationViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		self.wantsFullScreenLayout = YES;
     }
     return self;
 }
@@ -55,7 +57,7 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
+{	
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -84,7 +86,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 - (void) toggleViewIcon {
@@ -138,15 +140,19 @@
 }
 
 - (IBAction) pressProfileButton {
-	NSLog(@"show profile");
+	NSLog(@"show authorization");
+	[self.view addSubview: authorizationViewController.view];
+	[self toggleMenu];
 }
 
 - (IBAction) pressArchiveButton {
 	NSLog(@"show archive");
+	[self toggleMenu];
 }
 
 - (IBAction) pressFriendsButton {
 	NSLog(@"show friends");
+	[self toggleMenu];
 }
 
 @end

@@ -17,29 +17,30 @@
 
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
+		self.wantsFullScreenLayout = YES;
     }
     return self;
 }
-*/
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
 	
-	self.view.bounds = CGRectMake(0, 0, self.view.bounds.size.height, self.view.bounds.size.width);
+    [super viewDidLoad];
+	CGRect screenBounds = [[UIScreen mainScreen] bounds];
+	CGFloat screenScale = [[UIScreen mainScreen] scale];
+	self.view.frame = CGRectMake(0.0, 0.0, screenBounds.size.height * screenScale, screenBounds.size.width * screenScale);
 }
 
 
 // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 
@@ -101,8 +102,7 @@
 	}
 	
 	
-	[self.view removeFromSuperview];
-	
+	[self.view removeFromSuperview];	
 }
 
 @end

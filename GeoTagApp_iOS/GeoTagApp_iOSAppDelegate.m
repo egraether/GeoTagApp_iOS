@@ -18,29 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    cameraViewController = [[UIImagePickerController alloc] init];
-    
-    cameraViewController.sourceType =  UIImagePickerControllerSourceTypeCamera;
-    
-    cameraViewController.allowsEditing = NO;
-    
-    cameraViewController.showsCameraControls = NO;
-    cameraViewController.navigationBarHidden = YES;
-    
-    cameraViewController.toolbarHidden = YES;
-    cameraViewController.wantsFullScreenLayout = YES;
-    
-    cameraViewController.cameraOverlayView.transform = CGAffineTransformMakeRotation(M_PI_2);
-    [cameraViewController.cameraOverlayView addSubview: menuViewController.view];
-    
-    cameraViewController.cameraViewTransform = CGAffineTransformMakeScale(1.254, 1.254);
-
-    self.window.rootViewController = [[UIViewController alloc] init];
+	[self initCameraView];
+	
+	self.window.rootViewController = [[UIViewController alloc] init];
     [self.window makeKeyAndVisible];
-    
-    activeViewController = cameraViewController;
-    [self.window.rootViewController presentModalViewController:cameraViewController animated:NO];
+
+	activeViewController = cameraViewController;
+	[self.window.rootViewController presentModalViewController:cameraViewController animated:NO];
     
     
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:NO];
@@ -108,6 +92,32 @@
     [super dealloc];
 }
 
+- (void)initCameraView {
+
+	if([UIImagePickerController isCameraDeviceAvailable: UIImagePickerControllerCameraDeviceRear]) {
+		cameraViewController = [[UIImagePickerController alloc] init];
+    
+		cameraViewController.sourceType =  UIImagePickerControllerSourceTypeCamera;
+    
+		cameraViewController.allowsEditing = NO;
+    
+		cameraViewController.showsCameraControls = NO;
+		cameraViewController.navigationBarHidden = YES;
+    
+		cameraViewController.toolbarHidden = YES;
+		cameraViewController.wantsFullScreenLayout = YES;
+    
+		cameraViewController.cameraOverlayView.transform = CGAffineTransformMakeRotation(M_PI_2);
+		[cameraViewController.cameraOverlayView addSubview: menuViewController.view];
+    
+		cameraViewController.cameraViewTransform = CGAffineTransformMakeScale(1.254, 1.254);	
+	}
+	else {
+		cameraViewController = [[UIViewController alloc] init];
+		cameraViewController.view.transform = CGAffineTransformMakeRotation(M_PI_2);
+		[cameraViewController.view addSubview: menuViewController.view];
+	}
+}
 
 #pragma mark - Location
 
@@ -236,7 +246,11 @@
     
     if (activeViewController == mapViewController) {
         
-        [cameraViewController.cameraOverlayView addSubview: menuViewController.view];
+		if([UIImagePickerController isCameraDeviceAvailable: UIImagePickerControllerCameraDeviceRear])
+			[cameraViewController.cameraOverlayView addSubview: menuViewController.view];
+		else
+			[cameraViewController.view addSubview: menuViewController.view];
+		
         activeViewController = cameraViewController;
         
     } else {
@@ -248,7 +262,6 @@
     
     [self.window.rootViewController dismissModalViewControllerAnimated:NO];
     [self.window.rootViewController presentModalViewController: activeViewController animated:NO];
-    
 }
 
 

@@ -23,6 +23,6 @@
 
 - (IBAction) pressBackButton;
 - (IBAction) pressLoginButton;
-- (void) loginWithUsername:(NSString *) username password:(NSString *) password;
+- (void) login;
 
 @end

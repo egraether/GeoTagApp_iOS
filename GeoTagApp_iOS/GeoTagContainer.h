@@ -12,11 +12,12 @@
 @class Vector;
 
 @interface GeoTagContainer : NSObject {
-    
-    NSMutableArray* geoTags;
+
+    float focalLength;
     
 }
 
+@property (nonatomic, retain) UIView* view;
 @property (nonatomic, retain) NSMutableArray* geoTags;
 @property (nonatomic) CGSize screenSize;
 
@@ -27,6 +28,7 @@
 - (void) calculateGeoTagPhoneDirectionsWithHeading: (float)heading andAcceleration: (Vector*)acceleration;
 
 - (void) clearGeoTags;
+- (void) addGeoTagViews;
 - (void) removeGeoTagViews;
 
 @end

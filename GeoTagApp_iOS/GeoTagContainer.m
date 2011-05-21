@@ -24,6 +24,7 @@
 
 @synthesize geoTags;
 @synthesize screenSize;
+@synthesize view;
 
 - (GeoTagContainer*) init {
 
@@ -36,6 +37,11 @@
     
     screenSize = CGSizeMake(screenBounds.size.height * screenScale, 
                             screenBounds.size.width * screenScale);
+                            
+    float angularFOV = 47.5 * M_PI / 180;
+    focalLength = screenSize.width / 2 / tanf(angularFOV / 2);
+    
+    view = [[UIView alloc] init];
     
     return self;
 
@@ -63,11 +69,9 @@
                 
                 SimpleKMLPoint *point = ((SimpleKMLPlacemark *)feature).point;
                 
-                GeoTag* geoTag = [[GeoTag alloc] init];
-                
-                geoTag.message = ((SimpleKMLPlacemark *)feature).featureDescription;
-                geoTag.author = ((SimpleKMLPlacemark *)feature).name;
-                geoTag.location = point.location;
+                GeoTag* geoTag = [[GeoTag alloc] initAtLocation: point.location 
+                                                withMessage: feature.featureDescription
+                                                andAuthor: feature.name];
                 
                 [geoTags addObject:geoTag];
                 
@@ -96,8 +100,6 @@
         geoTag.worldDirection = [[Vector alloc] initVectorFromLocation:location toLocation:geoTag.location];
         geoTag.worldDirection.z = 0;
         
-        [geoTag.worldDirection print];
-        
     }
     
 }
@@ -119,9 +121,6 @@
     [x normalize];
     
     Matrix* matrix = [[Matrix alloc] initTransposedWithVectorsA: x B: y C: z];
-    
-    float angularFOV = 47.5 * M_PI / 180;
-    float focalLength = screenSize.width / 2 / tanf(angularFOV / 2);
     
     for (GeoTag* geoTag in geoTags) {
         
@@ -145,12 +144,30 @@
 
 }
 
+- (void) addGeoTagViews {
+    
+    for (GeoTag* geoTag in geoTags) {
+    
+        if (geoTag.screenPosition.z > 0.0 && 
+            geoTag.screenPosition.x > 0.0 && geoTag.screenPosition.x < screenSize.width &&
+            geoTag.screenPosition.y > 0.0 && geoTag.screenPosition.y < screenSize.height) {
+    
+            geoTag.buttonView.frame = CGRectMake(geoTag.screenPosition.x - 15, geoTag.screenPosition.y - 15, 
+                                    geoTag.buttonView.frame.size.width, geoTag.buttonView.frame.size.height);
+                                    
+            [view addSubview:geoTag.buttonView];
+            
+        }
+    
+    }
+
+}
+
 - (void) removeGeoTagViews {
     
     for (GeoTag* geoTag in geoTags) {
         
-        [geoTag.button removeFromSuperview];
-        [geoTag.textView removeFromSuperview];
+        [geoTag.buttonView removeFromSuperview];
     
     }
 

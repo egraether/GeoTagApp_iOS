@@ -44,8 +44,6 @@
 - (void) locationChanged;
 - (void) rotationChanged;
 
-- (void) showGeoTags;
-
 // Location
 
 - (void)startLocationUpdates;

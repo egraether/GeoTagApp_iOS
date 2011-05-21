@@ -6,27 +6,46 @@
 @implementation GeoTag
 
 
-@synthesize message, author;
 @synthesize location;
 
 @synthesize worldDirection, phoneDirection;
 @synthesize screenPosition;
 
-@synthesize button, textView;
+@synthesize buttonView;
 
-- (GeoTag*) init {
+- (GeoTag*) initAtLocation: (CLLocation*)_location 
+               withMessage: (NSString*)_message 
+                 andAuthor: (NSString*)_author {
 
     self = [super init];
     
-    button = [UIButton buttonWithType:UIButtonTypeCustom];        
-    button.frame = CGRectMake(0, 0, 30, 29);
+    location = _location;
+    message = _message;
+    author = _author;
     
-    [button setImage: [UIImage imageNamed:@"map_item.png"] forState:UIControlStateNormal];
+    [location retain];
+    [message retain];
+    [author retain];
     
-    [button retain];
+    buttonView = [UIButton buttonWithType:UIButtonTypeCustom];        
     
-    textView = [[UITextView alloc] init];
-    [textView retain];
+    imageView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"map_item.png"]];
+    [buttonView addSubview: imageView];
+    
+    messageView = [[UITextView alloc] init];
+    messageView.text = message;
+    [buttonView addSubview: messageView];
+    messageView.frame = CGRectMake(30, 0, 170, messageView.contentSize.height);
+    
+    authorView = [[UITextView alloc] init];
+    authorView.text = author;
+    [buttonView addSubview: authorView];
+    authorView.frame = CGRectMake(30, messageView.contentSize.height, 170, authorView.contentSize.height); 
+    
+    buttonView.frame = CGRectMake(0, 0, 200, messageView.contentSize.height + authorView.contentSize.height);
+    //[buttonView setImage: [UIImage imageNamed:@"map_item.png"] forState:UIControlStateNormal];
+    
+    [buttonView retain];
     
     return self;
 

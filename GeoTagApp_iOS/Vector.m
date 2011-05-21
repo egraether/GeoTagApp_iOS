@@ -15,13 +15,13 @@
 
 }
 
-- (Vector*) initWithX: (float)x y: (float)y z: (float)z {
+- (Vector*) initWithX: (float)_x y: (float)_y z: (float)_z {
     
     self = [super init];
 
-    self.x = x;
-    self.y = y;
-    self.z = z;
+    x = _x;
+    y = _y;
+    z = _z;
     
     return self;
     

@@ -26,13 +26,13 @@
 
 }
 
-- (Matrix*) initWithVectorsA: (Vector*)a  B: (Vector*)b C: (Vector*)c {
+- (Matrix*) initWithVectorsA: (Vector*)_a  B: (Vector*)_b C: (Vector*)_c {
 
     self = [super init];
     
-    self.a = a;
-    self.b = b;
-    self.c = c;
+    a = _a;
+    b = _b;
+    c = _c;
     
     return self;
     

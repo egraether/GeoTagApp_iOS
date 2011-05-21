@@ -14,14 +14,16 @@
 
 @interface GeoTag : NSObject<MKAnnotation> {
 
+    UIImageView* imageView;
+    UITextView* messageView;
+    UITextView* authorView;
+
+    NSString* message;
+    NSString* author;
+
 }
 
-@property (nonatomic, retain) UIButton* button;
-@property (nonatomic, retain) UITextView* textView;
-
-@property (nonatomic, retain) NSString* message;
-@property (nonatomic, retain) NSString* author;
-
+@property (nonatomic, retain) UIButton* buttonView;
 @property (nonatomic, retain) CLLocation* location;
 
 @property (nonatomic, retain) Vector* worldDirection;
@@ -29,7 +31,9 @@
 
 @property (nonatomic, retain) Vector* screenPosition;
 
-- (GeoTag*) init;
+- (GeoTag*) initAtLocation: (CLLocation*)_location 
+               withMessage: (NSString*)_message 
+                 andAuthor: (NSString*)_author;
 
 - (CLLocationCoordinate2D) coordinate;
 - (NSString*) title;

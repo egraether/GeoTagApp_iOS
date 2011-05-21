@@ -18,6 +18,7 @@
 }
 
 @property (nonatomic, retain) NSMutableArray* geoTags;
+@property (nonatomic) CGSize screenSize;
 
 - (GeoTagContainer*) init;
 

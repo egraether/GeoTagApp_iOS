@@ -23,12 +23,19 @@
 
 
 @synthesize geoTags;
+@synthesize screenSize;
 
 - (GeoTagContainer*) init {
 
     self = [super init];
 
     geoTags = [[NSMutableArray alloc] initWithCapacity:100];
+    
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    CGFloat screenScale = [[UIScreen mainScreen] scale];
+    
+    screenSize = CGSizeMake(screenBounds.size.height * screenScale, 
+                            screenBounds.size.width * screenScale);
     
     return self;
 
@@ -113,13 +120,6 @@
     
     Matrix* matrix = [[Matrix alloc] initTransposedWithVectorsA: x B: y C: z];
     
-    
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    CGFloat screenScale = [[UIScreen mainScreen] scale];
-    
-    CGSize screenSize = CGSizeMake(screenBounds.size.height * screenScale, 
-                                   screenBounds.size.width * screenScale);
-    
     float angularFOV = 47.5 * M_PI / 180;
     float focalLength = screenSize.width / 2 / tanf(angularFOV / 2);
     
@@ -150,6 +150,7 @@
     for (GeoTag* geoTag in geoTags) {
         
         [geoTag.button removeFromSuperview];
+        [geoTag.textView removeFromSuperview];
     
     }
 

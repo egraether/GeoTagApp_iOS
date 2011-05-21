@@ -297,10 +297,21 @@
 
     for (GeoTag* geoTag in geoTagContainer.geoTags) {
     
-        if (geoTag.screenPosition.z > 0.0) {
+        if (geoTag.screenPosition.z > 0.0 && 
+            geoTag.screenPosition.x > 0.0 && geoTag.screenPosition.x < geoTagContainer.screenSize.width &&
+            geoTag.screenPosition.y > 0.0 && geoTag.screenPosition.y < geoTagContainer.screenSize.height) {
     
             geoTag.button.frame = CGRectMake(geoTag.screenPosition.x - 15, geoTag.screenPosition.y - 15, 30, 29);
             [cameraViewController.cameraOverlayView addSubview: geoTag.button];
+            
+            CGRect rect = CGRectMake(geoTag.screenPosition.x + 15, geoTag.screenPosition.y - 15, 100, 25);
+            
+            geoTag.textView.frame = rect;
+            geoTag.textView.text = geoTag.message;
+            [cameraViewController.cameraOverlayView addSubview: geoTag.textView];
+
+            rect.size.height = geoTag.textView.contentSize.height;
+            geoTag.textView.frame = rect;
             
         }
         

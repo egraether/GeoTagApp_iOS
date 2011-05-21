@@ -12,7 +12,7 @@
 @synthesize worldDirection, phoneDirection;
 @synthesize screenPosition;
 
-@synthesize button;
+@synthesize button, textView;
 
 - (GeoTag*) init {
 
@@ -24,6 +24,9 @@
     [button setImage: [UIImage imageNamed:@"map_item.png"] forState:UIControlStateNormal];
     
     [button retain];
+    
+    textView = [[UITextView alloc] init];
+    [textView retain];
     
     return self;
 

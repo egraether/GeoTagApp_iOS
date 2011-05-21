@@ -17,6 +17,7 @@
 }
 
 @property (nonatomic, retain) UIButton* button;
+@property (nonatomic, retain) UITextView* textView;
 
 @property (nonatomic, retain) NSString* message;
 @property (nonatomic, retain) NSString* author;

@@ -34,6 +34,8 @@
 	CGRect screenBounds = [[UIScreen mainScreen] bounds];
 	CGFloat screenScale = [[UIScreen mainScreen] scale];
 	self.view.frame = CGRectMake(0.0, 0.0, screenBounds.size.height * screenScale, screenBounds.size.width * screenScale);
+	
+	[textField becomeFirstResponder];
 }
 
 
@@ -62,6 +64,13 @@
     [super dealloc];
 }
 
+- (IBAction) onHitKeyboardReturn: (id)sender {
+	[sender resignFirstResponder];
+}
+- (IBAction) onTouchOutsideTextField: (id)sender {
+	[textField resignFirstResponder];
+}
+
 
 - (IBAction) pressBackButton {
 	
@@ -71,6 +80,7 @@
 
 - (IBAction) pressPostButton {
 	
+	// [textField resignFirstResponder];
 	// TODO: post message to server
 		
 	CLLocation *currentLocation = [locationDelegate getCurrentLocation];
@@ -91,7 +101,9 @@
 				   forKey:@"geotag[lng]"];
 	[request setPostValue:[NSString stringWithFormat:@"%f", currentLocation.altitude] 
 				   forKey:@"geotag[alt]"];
+
 	[request setRequestMethod:@"POST"];
+	request.shouldRedirect = NO;
 	
 	[request startSynchronous];
 	NSError *error = [request error];

@@ -155,6 +155,9 @@
             geoTag.buttonView.frame = CGRectMake(geoTag.screenPosition.x - 15, geoTag.screenPosition.y - 15, 
                                     geoTag.buttonView.frame.size.width, geoTag.buttonView.frame.size.height);
                                     
+//            float scale = 1.5 * (1.0 - geoTag.screenPosition.z / 1000.0);
+//            geoTag.buttonView.transform = CGAffineTransformMakeScale(scale, scale);
+                                    
             [view addSubview:geoTag.buttonView];
             
         }

@@ -41,6 +41,8 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
+- (void) initCameraView;
+
 - (void) locationChanged;
 - (void) rotationChanged;
 

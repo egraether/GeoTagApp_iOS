@@ -136,12 +136,14 @@
 - (IBAction) pressPostButton {
 	NSLog(@"show post formular");
 	[self.view addSubview: postViewController.view];
+	[postViewController.textField becomeFirstResponder];
 	[self toggleMenu];
 }
 
 - (IBAction) pressProfileButton {
 	NSLog(@"show authorization");
 	[self.view addSubview: authorizationViewController.view];
+	[authorizationViewController.usernameField becomeFirstResponder];
 	[self toggleMenu];
 }
 

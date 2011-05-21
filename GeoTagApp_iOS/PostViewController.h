@@ -25,6 +25,8 @@
 @property (nonatomic, assign) id<LocationDelegate> locationDelegate;
 @property (nonatomic, retain) UITextView *textField;
 
+- (IBAction) onTouchOutsideTextField: (id)sender;
+- (IBAction) onHitKeyboardReturn: (id)sender;
 - (IBAction) pressBackButton;
 - (IBAction) pressPostButton;
 

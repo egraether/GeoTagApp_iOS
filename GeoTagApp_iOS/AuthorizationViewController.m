@@ -7,9 +7,13 @@
 //
 
 #import "AuthorizationViewController.h"
+#import "ASIFormDataRequest.h"
 
 
 @implementation AuthorizationViewController
+
+@synthesize usernameField;
+@synthesize passwordField;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -27,9 +31,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+	CGRect screenBounds = [[UIScreen mainScreen] bounds];
 	CGFloat screenScale = [[UIScreen mainScreen] scale];
 	self.view.frame = CGRectMake(0.0, 0.0, screenBounds.size.height * screenScale, screenBounds.size.width * screenScale);
+	
+	[usernameField setSecureTextEntry: NO];
+	[passwordField setSecureTextEntry: YES];
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -60,14 +67,34 @@
 - (IBAction) pressBackButton {
 	
 	[self.view removeFromSuperview];
-	
 }
 
 - (IBAction) pressLoginButton {
+
+	NSLog(@"login: %@ / %@\n ", usernameField.text, passwordField.text);
+	
+	NSURL *url = [NSURL URLWithString:@"http://sbickt.heroku.com/users/login"];
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+	[request setPostValue: usernameField.text forKey:@"nickname"];
+	[request setPostValue: passwordField.text forKey:@"password"];
+	[request setUseSessionPersistence:YES];
+	
+	[request setRequestMethod:@"POST"];
+	request.shouldRedirect = NO;
+	
+	[request startSynchronous];
+	NSError *error = [request error];
+	if (!error) {
+		NSLog(@"success!\n");
+		NSString *response = [request responseString];
+		NSLog(@"%@", response);
+		NSLog(@"%@", [request responseHeaders]);
+	}
 	
 } 
 
-- (void) loginWithUsername:(NSString *) username password:(NSString *) password {
+- (void) login {
+
 	
 }
 

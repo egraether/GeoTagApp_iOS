@@ -16,6 +16,7 @@
 
 }
 
+@property (nonatomic, retain) UIButton* button;
 
 @property (nonatomic, retain) NSString* message;
 @property (nonatomic, retain) NSString* author;
@@ -26,6 +27,8 @@
 @property (nonatomic, retain) Vector* phoneDirection;
 
 @property (nonatomic, retain) Vector* screenPosition;
+
+- (GeoTag*) init;
 
 - (CLLocationCoordinate2D) coordinate;
 - (NSString*) title;

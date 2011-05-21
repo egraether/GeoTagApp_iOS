@@ -54,7 +54,7 @@
 	menuViewController.postViewController.locationDelegate = self;
     
     [self startLocationUpdates];
-    // [self startMotionUpdates];
+    [self startMotionUpdates];
     
     return YES;
     
@@ -144,19 +144,7 @@
         location = currentLocation;
         [location retain];
         
-        [mapViewController removeGeoTagAnnotations];
-        
-        [geoTagContainer loadGeoTagsByCoordinate: location.coordinate];
-        [geoTagContainer calculateGeoTagWorldDirectionsAtLocation: location];
-        
-        [mapViewController addGeoTagAnnotations];
-        
-        if (activeViewController == cameraViewController) {
-            
-            [geoTagContainer calculateGeoTagPhoneDirectionsWithHeading: heading 
-                                                       andAcceleration: rotation];
-            
-        }
+        [self locationChanged];
         
         NSLog(@"latitude %+.6f, longitude %+.6f, altitude %+.6f\n",
               currentLocation.coordinate.latitude,
@@ -183,12 +171,7 @@
     
     heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading);
     
-    if (activeViewController == cameraViewController) {
-        
-        [geoTagContainer calculateGeoTagPhoneDirectionsWithHeading: heading 
-                                                   andAcceleration: rotation];
-        
-    }
+    [self rotationChanged];
     
     NSLog(@"heading: %+.2f", heading);
 }
@@ -221,6 +204,8 @@
     motionManager = [[CMMotionManager alloc] init];
     [motionManager startAccelerometerUpdates];
     
+    rotation = [[Vector alloc] initWithX: -1 y: 0 z: 0];
+    
     NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                                       target:self 
                                                     selector:@selector(doMotionUpdate)
@@ -236,12 +221,7 @@
     CMAcceleration a = motionManager.accelerometerData.acceleration;
     rotation = [[Vector alloc] initWithX: a.x y: a.y z: a.z];
     
-    if (activeViewController == cameraViewController) {
-        
-        [geoTagContainer calculateGeoTagPhoneDirectionsWithHeading: heading 
-                                                   andAcceleration: rotation];
-        
-    }
+    [self rotationChanged];
     
     NSLog(@"acceleration: %+.2f | %+.2f | %+.2f", a.x, a.y, a.z);
     
@@ -281,6 +261,51 @@
     }
     
     return nil;
+}
+
+- (void) locationChanged {
+
+    [mapViewController removeGeoTagAnnotations];
+    
+    [geoTagContainer clearGeoTags];
+        
+    [geoTagContainer loadGeoTagsByCoordinate: location.coordinate];
+    [geoTagContainer calculateGeoTagWorldDirectionsAtLocation: location];
+    
+    [mapViewController addGeoTagAnnotations];
+    
+    [self rotationChanged];
+
+}
+
+- (void) rotationChanged {
+
+    if (activeViewController == cameraViewController) {
+    
+        [geoTagContainer removeGeoTagViews];
+        
+        [geoTagContainer calculateGeoTagPhoneDirectionsWithHeading: heading 
+                                                   andAcceleration: rotation];
+                                                   
+        [self showGeoTags];
+        
+    }
+
+}
+
+-(void) showGeoTags {
+
+    for (GeoTag* geoTag in geoTagContainer.geoTags) {
+    
+        if (geoTag.screenPosition.z > 0.0) {
+    
+            geoTag.button.frame = CGRectMake(geoTag.screenPosition.x - 15, geoTag.screenPosition.y - 15, 30, 29);
+            [cameraViewController.cameraOverlayView addSubview: geoTag.button];
+            
+        }
+        
+    }
+
 }
 
 @end

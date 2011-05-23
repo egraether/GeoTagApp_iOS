@@ -16,6 +16,8 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>icon.png</string>
+	<key>Launch image</key>
+	<string>start_screen.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>at.multimediatechnology.mmt2009</string>
 	<key>CFBundleInfoDictionaryVersion</key>

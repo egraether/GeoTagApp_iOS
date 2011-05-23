@@ -11,6 +11,7 @@
 
 @class PostViewController;
 @class AuthorizationViewController;
+@class ArchiveViewController;
 
 @protocol TouchDelegate
 
@@ -46,12 +47,13 @@
 	
 	IBOutlet PostViewController *postViewController;
 	IBOutlet AuthorizationViewController *authorizationViewController;
-
+	IBOutlet ArchiveViewController *archiveViewController;
 }
 
 @property (nonatomic, retain) TouchView* touchView;
 @property (nonatomic, retain) PostViewController *postViewController;
 @property (nonatomic, retain) AuthorizationViewController *authorizationViewController;
+@property (nonatomic, retain) ArchiveViewController *archiveViewController;
 
 - (IBAction) toggleViewIcon;
 - (IBAction) toggleMenu;

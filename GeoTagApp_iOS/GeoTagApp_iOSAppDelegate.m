@@ -39,7 +39,6 @@
 	menuViewController.postViewController.locationDelegate = self;
     
     [self startLocationUpdates];
-    [self startMotionUpdates];
     
     return YES;
     
@@ -113,7 +112,9 @@
         [cameraViewController.cameraOverlayView addSubview: geoTagContainer.view];
 		[cameraViewController.cameraOverlayView addSubview: menuViewController.view];
     
-		cameraViewController.cameraViewTransform = CGAffineTransformMakeScale(1.254, 1.254);	
+		cameraViewController.cameraViewTransform = CGAffineTransformMakeScale(1.254, 1.254);
+		
+		[self startMotionUpdates];
 	}
 	else {
 		cameraViewController = [[UIViewController alloc] init];

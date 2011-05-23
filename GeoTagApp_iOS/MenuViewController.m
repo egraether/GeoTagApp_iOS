@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "PostViewController.h"
 #import "AuthorizationViewController.h"
+#import "ArchiveViewController.h"
 
 @implementation TouchView
 
@@ -30,6 +31,7 @@
 @synthesize touchView;
 @synthesize postViewController;
 @synthesize authorizationViewController;
+@synthesize archiveViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -149,6 +151,7 @@
 
 - (IBAction) pressArchiveButton {
 	NSLog(@"show archive");
+	[self.view addSubview: archiveViewController.view];
 	[self toggleMenu];
 }
 

@@ -20,6 +20,7 @@
 		3D3DA3D61357A93900D891FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3DA3D51357A93900D891FF /* SystemConfiguration.framework */; };
 		3D3DA3D81357A94000D891FF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3DA3D71357A94000D891FF /* MobileCoreServices.framework */; };
 		3D3DA3DA1357A95900D891FF /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3DA3D91357A95900D891FF /* libz.1.2.3.dylib */; };
+		3D5792A2138A622A00170EF7 /* start_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5792A1138A622A00170EF7 /* start_screen.png */; };
 		3D67F67013565166006157E3 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67F66E13565166006157E3 /* PostViewController.m */; };
 		3D67F67113565166006157E3 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D67F66F13565166006157E3 /* PostViewController.xib */; };
 		3D67F678135653F2006157E3 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D67F677135653F2006157E3 /* icon.png */; };
@@ -30,6 +31,10 @@
 		3D67F68813565864006157E3 /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D67F68613565864006157E3 /* back_button.png */; };
 		3D67F68913565864006157E3 /* post_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D67F68713565864006157E3 /* post_button.png */; };
 		3DF50EA113881C3D008E83C2 /* LiteraEF-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DF50EA013881C3D008E83C2 /* LiteraEF-Medium.ttf */; };
+		3DF50ED4138821E7008E83C2 /* ArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF50ED2138821E7008E83C2 /* ArchiveViewController.m */; };
+		3DF50ED5138821E7008E83C2 /* ArchiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF50ED3138821E7008E83C2 /* ArchiveViewController.xib */; };
+		3DF51008138A3BE0008E83C2 /* ArchiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF51007138A3BE0008E83C2 /* ArchiveTableViewCell.m */; };
+		3DF51016138A3C1E008E83C2 /* ArchiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF51015138A3C1E008E83C2 /* ArchiveTableViewCell.xib */; };
 		3DF7B17A136C57B20035B6C1 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7B178136C57B20035B6C1 /* AuthorizationViewController.m */; };
 		3DF7B17B136C57B20035B6C1 /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7B179136C57B20035B6C1 /* AuthorizationViewController.xib */; };
 		685687FB135876B80021715F /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 685687FA135876B60021715F /* Matrix.m */; };
@@ -163,6 +168,7 @@
 		3D3DA3D51357A93900D891FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3D3DA3D71357A94000D891FF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D3DA3D91357A95900D891FF /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		3D5792A1138A622A00170EF7 /* start_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start_screen.png; path = data/start_screen.png; sourceTree = "<group>"; };
 		3D67F66D13565166006157E3 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		3D67F66E13565166006157E3 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		3D67F66F13565166006157E3 /* PostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
@@ -175,6 +181,12 @@
 		3D67F68713565864006157E3 /* post_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = post_button.png; path = data/images/post_button.png; sourceTree = "<group>"; };
 		3DBF88811358678D00ADBBFA /* LocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDelegate.h; sourceTree = "<group>"; };
 		3DF50EA013881C3D008E83C2 /* LiteraEF-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LiteraEF-Medium.ttf"; path = "data/LiteraEF-Medium.ttf"; sourceTree = "<group>"; };
+		3DF50ED1138821E7008E83C2 /* ArchiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveViewController.h; sourceTree = "<group>"; };
+		3DF50ED2138821E7008E83C2 /* ArchiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveViewController.m; sourceTree = "<group>"; };
+		3DF50ED3138821E7008E83C2 /* ArchiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveViewController.xib; sourceTree = "<group>"; };
+		3DF51006138A3BE0008E83C2 /* ArchiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveTableViewCell.h; sourceTree = "<group>"; };
+		3DF51007138A3BE0008E83C2 /* ArchiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewCell.m; sourceTree = "<group>"; };
+		3DF51015138A3C1E008E83C2 /* ArchiveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArchiveTableViewCell.xib; sourceTree = "<group>"; };
 		3DF7B177136C57B20035B6C1 /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
 		3DF7B178136C57B20035B6C1 /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
 		3DF7B179136C57B20035B6C1 /* AuthorizationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationViewController.xib; sourceTree = "<group>"; };
@@ -454,30 +466,36 @@
 		6867B4E0133E2A3B000EA2C8 /* GeoTagApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6898F7FE1350EB0A009BB5D5 /* Vector.h */,
-				6898F7FF1350EB0A009BB5D5 /* Vector.m */,
-				3DBF88811358678D00ADBBFA /* LocationDelegate.h */,
-				6867B4E9133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.h */,
-				6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */,
 				6867B4EC133E2A3B000EA2C8 /* MainWindow.xib */,
 				6867B4E1133E2A3B000EA2C8 /* Supporting Files */,
-				6867B518133E2E3A000EA2C8 /* MapViewController.h */,
-				6867B519133E2E3A000EA2C8 /* MapViewController.m */,
-				6867B51A133E2E3B000EA2C8 /* MapViewController.xib */,
+				6898F7FE1350EB0A009BB5D5 /* Vector.h */,
+				6898F7FF1350EB0A009BB5D5 /* Vector.m */,
 				6867B616133E489E000EA2C8 /* GeoTagContainer.h */,
 				6867B617133E489F000EA2C8 /* GeoTagContainer.m */,
 				6895743B133E6D5A006F7625 /* GeoTag.h */,
 				6895743C133E6D5C006F7625 /* GeoTag.m */,
+				6898F8021350EEBF009BB5D5 /* Quaternion.h */,
+				6898F8031350EEBF009BB5D5 /* Quaternion.m */,
+				685687F9135876B50021715F /* Matrix.h */,
+				685687FA135876B60021715F /* Matrix.m */,
+				3DBF88811358678D00ADBBFA /* LocationDelegate.h */,
+				6867B4E9133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.h */,
+				6867B4EA133E2A3B000EA2C8 /* GeoTagApp_iOSAppDelegate.m */,
+				3DF50ED1138821E7008E83C2 /* ArchiveViewController.h */,
+				3DF50ED2138821E7008E83C2 /* ArchiveViewController.m */,
+				3DF50ED3138821E7008E83C2 /* ArchiveViewController.xib */,
+				3DF51006138A3BE0008E83C2 /* ArchiveTableViewCell.h */,
+				3DF51007138A3BE0008E83C2 /* ArchiveTableViewCell.m */,
+				3DF51015138A3C1E008E83C2 /* ArchiveTableViewCell.xib */,
+				6867B518133E2E3A000EA2C8 /* MapViewController.h */,
+				6867B519133E2E3A000EA2C8 /* MapViewController.m */,
+				6867B51A133E2E3B000EA2C8 /* MapViewController.xib */,
 				68957465133F727A006F7625 /* MenuViewController.h */,
 				68957466133F727F006F7625 /* MenuViewController.m */,
 				68957467133F728E006F7625 /* MenuViewController.xib */,
-				6898F8021350EEBF009BB5D5 /* Quaternion.h */,
-				6898F8031350EEBF009BB5D5 /* Quaternion.m */,
 				3D67F66D13565166006157E3 /* PostViewController.h */,
 				3D67F66E13565166006157E3 /* PostViewController.m */,
 				3D67F66F13565166006157E3 /* PostViewController.xib */,
-				685687F9135876B50021715F /* Matrix.h */,
-				685687FA135876B60021715F /* Matrix.m */,
 				3DF7B177136C57B20035B6C1 /* AuthorizationViewController.h */,
 				3DF7B178136C57B20035B6C1 /* AuthorizationViewController.m */,
 				3DF7B179136C57B20035B6C1 /* AuthorizationViewController.xib */,
@@ -701,6 +719,7 @@
 		6895746E133F7556006F7625 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D5792A1138A622A00170EF7 /* start_screen.png */,
 				3DF50EA013881C3D008E83C2 /* LiteraEF-Medium.ttf */,
 				3D67F68613565864006157E3 /* back_button.png */,
 				3D67F68713565864006157E3 /* post_button.png */,
@@ -817,6 +836,9 @@
 				3D67F68913565864006157E3 /* post_button.png in Resources */,
 				3DF7B17B136C57B20035B6C1 /* AuthorizationViewController.xib in Resources */,
 				3DF50EA113881C3D008E83C2 /* LiteraEF-Medium.ttf in Resources */,
+				3DF50ED5138821E7008E83C2 /* ArchiveViewController.xib in Resources */,
+				3DF51016138A3C1E008E83C2 /* ArchiveTableViewCell.xib in Resources */,
+				3D5792A2138A622A00170EF7 /* start_screen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -925,6 +947,8 @@
 				3D3DA3CB1357A8DD00D891FF /* Reachability.m in Sources */,
 				685687FB135876B80021715F /* Matrix.m in Sources */,
 				3DF7B17A136C57B20035B6C1 /* AuthorizationViewController.m in Sources */,
+				3DF50ED4138821E7008E83C2 /* ArchiveViewController.m in Sources */,
+				3DF51008138A3BE0008E83C2 /* ArchiveTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

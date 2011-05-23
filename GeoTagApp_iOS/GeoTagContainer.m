@@ -75,20 +75,7 @@
                 
                 [geoTags addObject:geoTag];
                 
-//                NSLog(@"coordinates: %f - %f - %f", point.coordinate.latitude, point.coordinate.longitude, point.altitude);
             }
-            
-//            if (((SimpleKMLPlacemark *)feature).name) {
-//                
-//                NSLog(@"name: %@", ((SimpleKMLPlacemark *)feature).name);
-//                
-//            }
-//            
-//            if (((SimpleKMLPlacemark *)feature).featureDescription) {
-//                
-//                NSLog(@"description: %@", ((SimpleKMLPlacemark *)feature).featureDescription);
-//                
-//            }
         }
     }
 }

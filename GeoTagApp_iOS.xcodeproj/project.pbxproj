@@ -190,9 +190,9 @@
 		3DF7B177136C57B20035B6C1 /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
 		3DF7B178136C57B20035B6C1 /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
 		3DF7B179136C57B20035B6C1 /* AuthorizationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationViewController.xib; sourceTree = "<group>"; };
+		3DFE8A7E1392E9C80047A155 /* sbickt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sbickt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		685687F9135876B50021715F /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		685687FA135876B60021715F /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
-		6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoTagApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6867B4DA133E2A3B000EA2C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6867B4DC133E2A3B000EA2C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6867B4DE133E2A3B000EA2C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -440,8 +440,8 @@
 		6867B4D7133E2A3B000EA2C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */,
 				6867B4FA133E2A3B000EA2C8 /* GeoTagApp_iOSTests.octest */,
+				3DFE8A7E1392E9C80047A155 /* sbickt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -744,9 +744,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6867B4D5133E2A3B000EA2C8 /* GeoTagApp_iOS */ = {
+		6867B4D5133E2A3B000EA2C8 /* sbickt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6867B50D133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "GeoTagApp_iOS" */;
+			buildConfigurationList = 6867B50D133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "sbickt" */;
 			buildPhases = (
 				6867B4D2133E2A3B000EA2C8 /* Sources */,
 				6867B4D3133E2A3B000EA2C8 /* Frameworks */,
@@ -756,9 +756,9 @@
 			);
 			dependencies = (
 			);
-			name = GeoTagApp_iOS;
+			name = sbickt;
 			productName = GeoTagApp_iOS;
-			productReference = 6867B4D6133E2A3B000EA2C8 /* GeoTagApp_iOS.app */;
+			productReference = 3DFE8A7E1392E9C80047A155 /* sbickt.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6867B4F9133E2A3B000EA2C8 /* GeoTagApp_iOSTests */ = {
@@ -797,7 +797,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6867B4D5133E2A3B000EA2C8 /* GeoTagApp_iOS */,
+				6867B4D5133E2A3B000EA2C8 /* sbickt */,
 				6867B4F9133E2A3B000EA2C8 /* GeoTagApp_iOSTests */,
 			);
 		};
@@ -965,7 +965,7 @@
 /* Begin PBXTargetDependency section */
 		6867B4FF133E2A3B000EA2C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6867B4D5133E2A3B000EA2C8 /* GeoTagApp_iOS */;
+			target = 6867B4D5133E2A3B000EA2C8 /* sbickt */;
 			targetProxy = 6867B4FE133E2A3B000EA2C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1002,7 +1002,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Buchöster (HMMJ274F4T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1012,7 +1012,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				PROVISIONING_PROFILE = "034DD199-C982-4011-B1B4-C37C13254CEF";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
 				SDKROOT = iphoneos;
 			};
@@ -1022,7 +1022,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Buchöster (HMMJ274F4T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -1031,7 +1031,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				PROVISIONING_PROFILE = "034DD199-C982-4011-B1B4-C37C13254CEF";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "312B404A-79EC-4049-A6C8-C52059162F27";
 				SDKROOT = iphoneos;
 			};
@@ -1041,7 +1041,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1052,7 +1052,7 @@
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1062,7 +1062,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Eberhard Gräther (SZ6QN2CMGH)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1072,7 +1072,7 @@
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9C73CCDA-9C09-4044-B378-3152F7BF5EDF";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -1135,7 +1135,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6867B50D133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "GeoTagApp_iOS" */ = {
+		6867B50D133E2A3B000EA2C8 /* Build configuration list for PBXNativeTarget "sbickt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6867B50E133E2A3B000EA2C8 /* Debug */,

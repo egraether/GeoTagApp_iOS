@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @class Vector;
+@class GeoTag;
 
 @interface GeoTagContainer : NSObject {
 
@@ -32,3 +33,5 @@
 - (void) removeGeoTagViews;
 
 @end
+
+NSComparisonResult sortByDistance(GeoTag* firstItem, GeoTag* secondItem, void *context);

@@ -89,6 +89,8 @@
         
     }
     
+    [geoTags sortUsingFunction:sortByDistance context:@"dist"];
+    
 }
 
 - (void) calculateGeoTagPhoneDirectionsWithHeading: (float)heading 
@@ -164,3 +166,8 @@
 }
 
 @end
+
+NSComparisonResult sortByDistance(GeoTag* firstItem, GeoTag* secondItem, void *context) {
+    
+    return [[NSNumber numberWithFloat:[secondItem.worldDirection normSquared]] compare: [NSNumber numberWithFloat:[firstItem.worldDirection normSquared]]];
+}

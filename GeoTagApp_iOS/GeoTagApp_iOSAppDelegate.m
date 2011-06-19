@@ -208,7 +208,7 @@
     
     [self rotationChanged];
     
-    NSLog(@"heading: %+.2f", heading);
+//    NSLog(@"heading: %+.2f", heading);
 }
 
 - (CLLocationCoordinate2D) getCoordinate {

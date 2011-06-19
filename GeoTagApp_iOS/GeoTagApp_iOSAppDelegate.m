@@ -38,6 +38,16 @@
     menuViewController.touchView.delegate = self;
 	menuViewController.postViewController.locationDelegate = self;
     
+    rotationDeque = [NSMutableArray arrayWithCapacity:20];
+    
+    for (int i = 0; i < 20; i++) {
+    
+        [rotationDeque addObject: [[Vector alloc] init]];
+    
+    }
+    
+    [rotationDeque retain];
+    
     [self startLocationUpdates];
     
     return YES;
@@ -158,10 +168,10 @@
         
         [self locationChanged];
         
-        NSLog(@"latitude %+.6f, longitude %+.6f, altitude %+.6f\n",
-              currentLocation.coordinate.latitude,
-              currentLocation.coordinate.longitude,
-              currentLocation.altitude);
+//        NSLog(@"latitude %+.6f, longitude %+.6f, altitude %+.6f\n",
+//              currentLocation.coordinate.latitude,
+//              currentLocation.coordinate.longitude,
+//              currentLocation.altitude);
     }
     
     //[locationManager stopUpdatingLocation];
@@ -182,6 +192,19 @@
     }
     
     heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading);
+    
+//    [headingDeque removeObjectAtIndex:4];
+//    [headingDeque insertObject:[NSNumber numberWithDouble:heading] atIndex:0];
+//    
+//    heading = 0.0f;
+//    
+//    for (int i = 0; i < 5; i++) {
+//    
+//        heading += [[headingDeque objectAtIndex:i] doubleValue];
+//    
+//    }
+//    
+//    heading /= 5.0f;
     
     [self rotationChanged];
     
@@ -230,7 +253,20 @@
 -(void)doMotionUpdate {
     
     CMAcceleration a = motionManager.accelerometerData.acceleration;
-    rotation = [[Vector alloc] initWithX: a.x y: a.y z: a.z];
+    
+    [rotationDeque removeObjectAtIndex:19];
+    [rotationDeque insertObject:[[Vector alloc] initWithX: a.x y: a.y z: a.z] atIndex:0];
+    
+    rotation = [[Vector alloc] init];
+    
+    for (int i = 0; i < 20; i++) {
+    
+        [rotation addSelf: [rotationDeque objectAtIndex:i]];
+    
+    }
+    
+    [rotation divSelf:20.0f];
+    
     
     [self rotationChanged];
     

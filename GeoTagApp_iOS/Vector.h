@@ -16,10 +16,12 @@
 - (Vector*) initVectorFromLocation: (CLLocation*)from toLocation: (CLLocation*)to;
 
 - (Vector*) add: (Vector*)v;
+- (Vector*) addSelf: (Vector*)v;
 - (Vector*) sub: (Vector*)v;
 
 - (Vector*) mul: (float)k;
 - (Vector*) div: (float)k; 
+- (Vector*) divSelf: (float)k; 
 
 - (float) normSquared;
 - (float) norm;

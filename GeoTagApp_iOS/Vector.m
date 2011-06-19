@@ -69,6 +69,15 @@
     return a;
 }
 
+- (Vector*) addSelf: (Vector*)v {
+    
+    x += v.x;
+    y += v.y;
+    z += v.z;
+    
+    return self;
+}
+
 - (Vector*) sub: (Vector*)v {
     
     Vector* a = [[Vector alloc] init];
@@ -103,6 +112,19 @@
     }
     
     return a;
+
+}
+
+- (Vector*) divSelf: (float)k {
+    
+    if (k != 0) {
+        
+        x /= k;
+        y /= k;
+        z /= k;
+    }
+    
+    return self;
 
 }
 

@@ -14,8 +14,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6867B4D5133E2A3B000EA2C8"
-               BuildableName = "GeoTagApp_iOS.app"
-               BlueprintName = "GeoTagApp_iOS"
+               BuildableName = "sbickt.app"
+               BlueprintName = "sbickt"
                ReferencedContainer = "container:GeoTagApp_iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6867B4D5133E2A3B000EA2C8"
-            BuildableName = "GeoTagApp_iOS.app"
-            BlueprintName = "GeoTagApp_iOS"
+            BuildableName = "sbickt.app"
+            BlueprintName = "sbickt"
             ReferencedContainer = "container:GeoTagApp_iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +70,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6867B4D5133E2A3B000EA2C8"
-            BuildableName = "GeoTagApp_iOS.app"
-            BlueprintName = "GeoTagApp_iOS"
+            BuildableName = "sbickt.app"
+            BlueprintName = "sbickt"
             ReferencedContainer = "container:GeoTagApp_iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -37,6 +37,10 @@
     CLLocation *location;
     CLLocationDirection heading;
     Vector* rotation;
+    
+//    NSMutableArray* headingDeque;
+    NSMutableArray* rotationDeque;
+
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
